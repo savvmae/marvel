@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: marvel;
+    src: url('./masked_marvel/mask.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: marvel;
+  font-size: 22px;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.char-container {
+  width: calc(20% - 20px);
+  border: 2px solid black;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.thumbnail {
+  height: 215%;
+  width: 100%;
+}
+.char-name {
+  font-family: marvel;
+  font-size: 26px;
+}
+button {
+  /*margin: auto;*/
+}
+.char-info {
+  height: 40%;
+}
