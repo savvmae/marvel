@@ -6,17 +6,31 @@ var noImg = 'image_not_available';
 var nums = [];
 
 //variables for both
+
 var playerHealth;
 var playerDamage;
+var playerStatsComplete;
+var cpuHealth;
+var cpuDamage;
+var cpuStats;
 
 
 //variables for battle
 var battleMain = document.querySelector('main');
+var randomChar;
+var randomCharImgPath;
 
+var playerDiv = document.querySelector('.player');
+var playerImgDiv = document.querySelector('.player-img');
+var playerImg = document.createElement('img');
+var playerInfoDiv = document.querySelector('.player-info');
+var playerImgPath;
 
+var cpuDiv = document.querySelector('.cpu');
+var cpuImgDiv = document.querySelector('.cpu-img');
+var cpuInfoDiv = document.querySelector('.cpu-info');
 
 //functions for battle
-
 
 //chooses random stage background
 function changeBackground() {
@@ -29,11 +43,17 @@ function changeBackground() {
     'stage7'
   ];
   var currentBackGround = backgroundClasses[Math.floor(Math.random()*5)];
-  console.log(currentBackGround);
   battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
+  buildBattle();
+  // need to call subsequent functions within each funcion - only one onload allowed
 }
 
-///functions for index
+// function buildBattle() {
+//   playerImg.setAttribute('src', playerImgPath);
+//   console.log(playerImgPath);
+// }
+// this function needs a lot of work, but got img src path for player!
+//functions for index
 
 
 //loops through charInfo and gets health/damage numbers.
@@ -48,15 +68,16 @@ function isNumber(arr) {
 //function for click on character, sets stats for character
 function handleClick(event) {
   var selectedCharacter = event.target.textContent;
+  playerImgPath = event.target.previousElementSibling.src;
+  //this is the src of href, need to troubleshoot
   var playerArrayName = selectedCharacter.split("!");
   var playerName = playerArrayName[0];
   var playerArrayStats = selectedCharacter.split(" ");
   isNumber(playerArrayStats);
-  playerHealth = nums[0];
-  playerDamage = nums[1];
+  playerHealth = parseInt(nums[0]);
+  playerDamage = parseInt(nums[1]);
   playerStatsComplete = [playerName, playerHealth, playerDamage];
-  location.assign("./battle.html");
-  //this ^ reloads all js, tries to set chars again. how to stop this??? separate js file for battle? how to import variable names.
+  // location.assign("./battle.html");
 }
 
 //creates new characters and puts them on page.
@@ -77,9 +98,9 @@ function newChar (results) {
       charImg.setAttribute('class', 'thumbnail');
       charImg.setAttribute('src', charImgPath);
       charHealth = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-      charDamage = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+      charDamage = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
       charName.textContent = results[i].name + "! Health: " + charHealth + " Damage: " + charDamage;
-      charContainer.appendChild(charImg);
+      charInfo.appendChild(charImg);
       charInfo.appendChild(charName);
       charContainer.appendChild(charInfo);
       main.appendChild(charContainer);
@@ -94,6 +115,16 @@ function newChar (results) {
   }
 }
 
+//creates random character **computer
+
+function randomCharGenerator(results) {
+  randomChar = results[Math.floor(Math.random()*results.length)];
+  var cpuCharName = randomChar.name;
+  randomCharImgPath = randomChar.thumbnail.path + "/standard_large." + randomChar.thumbnail.extension;
+  cpuHealth = Math.floor(Math.random() * (20 - 1 )) + 1;
+  cpuDamage = Math.floor(Math.random() * (5 - 1 )) + 1;
+  cpuStats = [cpuCharName, cpuHealth, cpuDamage];
+}
 //Pulls data from api, sets results, make IIFE??
 
 function getMarvelResponse() {
@@ -113,6 +144,7 @@ function getMarvelResponse() {
     .done(function(data) {
         charResults = data.data.results;
         newChar(charResults)
+        randomCharGenerator(charResults);
     })
     .fail(function(err){
       console.log(err);
