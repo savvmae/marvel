@@ -13,29 +13,37 @@ var playerDamage;
 var playerStatsComplete;
 var cpuHealth;
 var cpuDamage;
+var cpuDamage2;
 var cpuStats;
-
 
 //variables for battle
 var battleMain = document.querySelector('main');
-var randomChar;
-var randomCharImgPath;
 var playerDiv = document.querySelector('.player');
 var playerImgDiv = document.querySelector('.player-img');
-var playerImg = document.createElement('img');
 var playerInfoDiv = document.querySelector('.player-info');
-var playerImgPath;
 var playerHBar = document.querySelector('#player-health-bar');
-var playerBattleH;
-var playerBattleD;
 var cpuDiv = document.querySelector('.cpu');
 var cpuImgDiv = document.querySelector('.cpu-img');
-var cpuImg = document.createElement('img');
 var cpuInfoDiv = document.querySelector('.cpu-info');
 var cpuHB = document.querySelector('#cpu-health-bar');
+var playButton = document.querySelector('.play');
+
+
+var randomChar;
+var randomCharImgPath;
+var playerBattleH;
+var playerBattleD;
+var playerBattleD2;
 var cpuBattleH;
 var cpuBattleD;
-var playButton = document.querySelector('.play');
+var cpuBattleD2;
+var playerImgPath;
+
+var playerImg = document.createElement('img');
+var cpuImg = document.createElement('img');
+
+
+
 
 //functions for battle
 
@@ -59,17 +67,21 @@ function buildBattle() {
     var cpuBattle = localStorage.cpuComplete.split(",");
     cpuBattleH = cpuBattle[1];
     cpuBattleD = cpuBattle[2];
+    cpuBattleD2 = cpuBattle[3];
     var playerBattle = localStorage.playerComplete.split(",");
     playerBattleH = playerBattle[1];
     playerBattleD = playerBattle[2];
+    playerBattleD2 = playerBattle[3];
+    console.log(cpuBattle);
+    console.log(playerBattle);
 
     //append info to html
     playerInfoDiv.textContent = playerBattle[0];
-    playerImg.setAttribute('src', playerBattle[3]);
+    playerImg.setAttribute('src', playerBattle[4]);
     playerImg.setAttribute('class', 'black-border');
     playerImgDiv.appendChild(playerImg);
     cpuInfoDiv.textContent = cpuBattle[0];
-    cpuImg.setAttribute('src', cpuBattle[3]);
+    cpuImg.setAttribute('src', cpuBattle[4]);
     cpuImg.setAttribute('class', 'black-border');
     cpuImgDiv.appendChild(cpuImg);
     cpuHB.setAttribute('max', cpuBattleH);
@@ -148,9 +160,10 @@ function handleClick(event) {
   isNumber(playerArrayStats);
   playerHealth = parseInt(nums[0]);
   playerDamage = parseInt(nums[1]);
-  playerStatsComplete = [playerName, playerHealth, playerDamage, playerImgPath];
+  playerDamage2 = parseInt(nums[2])
+  playerStatsComplete = [playerName, playerHealth, playerDamage, playerDamage2, playerImgPath];
   localStorage.playerComplete = playerStatsComplete.toString();
-  location.assign("./battle.html");
+  // location.assign("./battle.html");
 }
 
 //creates new characters and puts them on page.
@@ -161,19 +174,20 @@ function newChar (results) {
       filteredResults.push(results[i]);
       var charContainer = document.createElement('div');
       var charInfo = document.createElement('div');
-      var charName = document.createElement('button');
+      var charButton = document.createElement('button');
       var charImgPath = results[i].thumbnail.path + "/standard_large." + results[i].thumbnail.extension;
       var charImg = document.createElement('img');
       charContainer.setAttribute('class', 'char-container');
       charInfo.setAttribute('class', 'char-info');
-      charName.setAttribute('class', 'char-name click-me');
+      charButton.setAttribute('class', 'char-button');
       charImg.setAttribute('class', 'thumbnail');
       charImg.setAttribute('src', charImgPath);
-      charHealth = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-      charDamage = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-      charName.textContent = results[i].name + "! Health: " + charHealth + " Damage: " + charDamage;
+      var charHealth = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+      var charDamage = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      var charDamage2 = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      charButton.textContent = results[i].name + "! Health: " + charHealth + " Hit: " + charDamage + " Kick: " + charDamage2;
       charInfo.appendChild(charImg);
-      charInfo.appendChild(charName);
+      charInfo.appendChild(charButton);
       charContainer.appendChild(charInfo);
       main.appendChild(charContainer);
       var allButtons = document.querySelectorAll('button');
@@ -195,7 +209,8 @@ function randomCharGenerator(results) {
   randomCharImgPath = randomChar.thumbnail.path + "/standard_large." + randomChar.thumbnail.extension;
   cpuHealth = Math.floor(Math.random() * (20 - 1 )) + 1;
   cpuDamage = Math.floor(Math.random() * (5 - 1 )) + 1;
-  cpuStats = [cpuCharName, cpuHealth, cpuDamage, randomCharImgPath];
+  cpuDamage2 = Math.floor(Math.random() * (5 - 1 )) + 1;
+  cpuStats = [cpuCharName, cpuHealth, cpuDamage, cpuDamage2, randomCharImgPath];
   localStorage.cpuComplete = cpuStats.toString();
 }
 

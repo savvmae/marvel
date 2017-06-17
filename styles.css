@@ -42,13 +42,10 @@ choose character page
   height: 150%;
   width: 100%;
 }
-.char-name {
+.char-button {
   height: 75%;
   font-family: marvel;
   font-size: 26px;
-}
-button {
-  /*margin: auto;*/
 }
 .char-info {
   height: 40%;
