@@ -1,12 +1,13 @@
 var PUBLIC_KEY = "438bf8eda93048d2d8e7fd8c711f3cfc";
 var PRIV_KEY = "926c1bd505c279e6a79f9fefba59022daff90045";
+
 //variables for index
 var main = document.querySelector('.choose-char-main');
 var noImg = 'image_not_available';
 var nums = [];
 var filteredResults = [];
-//variables for both
 
+//variables for both
 var playerHealth;
 var playerDamage;
 var playerStatsComplete;
@@ -19,32 +20,22 @@ var cpuStats;
 var battleMain = document.querySelector('main');
 var randomChar;
 var randomCharImgPath;
-
 var playerDiv = document.querySelector('.player');
 var playerImgDiv = document.querySelector('.player-img');
 var playerImg = document.createElement('img');
 var playerInfoDiv = document.querySelector('.player-info');
 var playerImgPath;
 var playerHBar = document.querySelector('#player-health-bar');
-
-
 var playerBattleH;
 var playerBattleD;
-
-
 var cpuDiv = document.querySelector('.cpu');
 var cpuImgDiv = document.querySelector('.cpu-img');
 var cpuImg = document.createElement('img');
 var cpuInfoDiv = document.querySelector('.cpu-info');
 var cpuHB = document.querySelector('#cpu-health-bar');
-
-
 var cpuBattleH;
 var cpuBattleD;
-
-
 var playButton = document.querySelector('.play');
-
 
 //functions for battle
 
@@ -62,11 +53,9 @@ function changeBackground() {
   battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
   buildBattle();
   playButton.addEventListener('click', battle);
-
 }
-//builds characters in battle
+//builds characters in battle stage
 function buildBattle() {
-
     var cpuBattle = localStorage.cpuComplete.split(",");
     cpuBattleH = cpuBattle[1];
     cpuBattleD = cpuBattle[2];
@@ -83,16 +72,14 @@ function buildBattle() {
     cpuImg.setAttribute('src', cpuBattle[3]);
     cpuImg.setAttribute('class', 'black-border');
     cpuImgDiv.appendChild(cpuImg);
-
     cpuHB.setAttribute('max', cpuBattleH);
     playerHBar.setAttribute('max', playerBattleH);
     cpuHB.setAttribute('value', cpuBattleH);
     playerHBar.setAttribute('value', playerBattleH);
-
 }
 
+//the battle!
 function battle() {
-
   if (cpuBattleH > 0 && playerBattleH > 0) {
     cpuBattleH -= playerBattleD;
     cpuHB.setAttribute('value', cpuBattleH);
@@ -110,7 +97,7 @@ function battle() {
     }
 }
 
-
+//removes animation so that it can be reassigned at next move
 function remSwing(img) {
   setTimeout(function() {
     img.removeAttribute('class', 'swing');
@@ -118,6 +105,7 @@ function remSwing(img) {
   }, 500);
 }
 
+//delays attack of cpu so that characters aren't attacking simultaneously
 function cpuAttackDelay() {
   setTimeout(function() {
     cpuImg.setAttribute('class', 'r-swing black-border');
@@ -125,12 +113,16 @@ function cpuAttackDelay() {
     remSwing(cpuImg);
   }, 500);
 }
+
+//delays the win dance so that the progress bar and attack animation can happen first.
 function alertDelay(winner) {
   setTimeout(function() {
     winner.setAttribute('class', 'grow black-border');
     delayReset();
   }, 1500);
 }
+
+//delays the reset of the battlefield so that the win dance can happen
 function delayReset() {
     setTimeout(function(){
       buildBattle();
@@ -163,7 +155,6 @@ function handleClick(event) {
 
 //creates new characters and puts them on page.
 function newChar (results) {
-
   for(var i = 0; i < results.length; i ++){
     //checks whether image_not_available
     if(results[i].thumbnail.path.indexOf(noImg) === -1){
@@ -186,11 +177,10 @@ function newChar (results) {
       charContainer.appendChild(charInfo);
       main.appendChild(charContainer);
       var allButtons = document.querySelectorAll('button');
-
     }
-
   }
   randomCharGenerator(filteredResults);
+
 //loops through 'buttons' and assigns event listener, calls handleClick when clicked
 
   for(var j = 0; j < allButtons.length; j++) {
@@ -199,7 +189,6 @@ function newChar (results) {
 }
 
 //creates random character **computer
-
 function randomCharGenerator(results) {
   randomChar = results[Math.floor(Math.random()*results.length)];
   var cpuCharName = randomChar.name;
@@ -209,15 +198,14 @@ function randomCharGenerator(results) {
   cpuStats = [cpuCharName, cpuHealth, cpuDamage, randomCharImgPath];
   localStorage.cpuComplete = cpuStats.toString();
 }
-//Pulls data from api, sets results, make IIFE??
 
+//Pulls data from api, sets results
 function getMarvelResponse() {
 
   var ts = new Date().getTime();
   var hash = md5(ts + PRIV_KEY + PUBLIC_KEY).toString();
   var url = 'http://gateway.marvel.com:80/v1/public/characters';
   var charResults;
-
 
   $.getJSON(url, {
     ts: ts,
