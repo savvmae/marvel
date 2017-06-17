@@ -25,11 +25,26 @@ var playerImgDiv = document.querySelector('.player-img');
 var playerImg = document.createElement('img');
 var playerInfoDiv = document.querySelector('.player-info');
 var playerImgPath;
+var playerHBar = document.querySelector('#player-health-bar');
+
+
+var playerBattleH;
+var playerBattleD;
+
 
 var cpuDiv = document.querySelector('.cpu');
 var cpuImgDiv = document.querySelector('.cpu-img');
 var cpuImg = document.createElement('img');
 var cpuInfoDiv = document.querySelector('.cpu-info');
+var cpuHB = document.querySelector('#cpu-health-bar');
+
+
+var cpuBattleH;
+var cpuBattleD;
+
+
+var playButton = document.querySelector('.play');
+playButton.addEventListener('click', battle);
 
 //functions for battle
 
@@ -49,28 +64,47 @@ function changeBackground() {
   buildBattle();
   // need to call subsequent functions within each funcion - only one onload allowed
 }
-
+//builds characters in battle
 function buildBattle() {
 
   var cpuBattle = localStorage.cpuComplete.split(",");
-  var cpuBattleH = cpuBattle[1];
-  var cpuBattleH = cpuBattle[2];
+  cpuBattleH = cpuBattle[1];
+  cpuBattleD = cpuBattle[2];
   var playerBattle = localStorage.playerComplete.split(",");
-  var playerBattleH = playerBattle[1];
-  var playerBattleD = playerBattle[2];
+  playerBattleH = playerBattle[1];
+  playerBattleD = playerBattle[2];
 
   //append info to html
   playerInfoDiv.textContent = playerBattle[0] + " Health: " + playerBattle[1] + " Damage: " + playerBattle[2];
   playerImg.setAttribute('src', playerBattle[3]);
   playerImgDiv.appendChild(playerImg);
-
   cpuInfoDiv.textContent = cpuBattle[0] + " Health: " + cpuBattle[1] + " Damage: " + cpuBattle[2];
   cpuImg.setAttribute('src', cpuBattle[3]);
   cpuImgDiv.appendChild(cpuImg);
 
-
+  cpuHB.setAttribute('max', cpuBattleH);
+  playerHBar.setAttribute('max', playerBattleH);
+  cpuHB.setAttribute('value', cpuBattleH);
+  playerHBar.setAttribute('value', playerBattleH);
 }
 
+function battle() {
+  cpuInfoDiv.textContent = "";
+  playerInfoDiv.textContent = "";
+
+  if (cpuBattleH > 0 && playerBattleH > 0) {
+    cpuBattleH -= playerBattleD;
+    cpuHB.setAttribute('value', cpuBattleH);
+    playerBattleH -= cpuBattleD;
+    playerHBar.setAttribute('value', playerBattleH);
+  }
+  else if (cpuBattleH <= 0) {
+    alert("you win!");
+  }
+  else if (playerBattleH <= 0) {
+    alert("you lose!");
+  }
+}
 
 
 //loops through charInfo and gets health/damage numbers.

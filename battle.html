@@ -11,17 +11,24 @@
   </head>
   <body onload="changeBackground()">
     <main class="battle-main">
-    <div class="player">
-      <div class="player-info"></div>
-      <div class="player-img"></div>
+      <div class='wrapper'>
+      <progress id="player-health-bar"></progress>
+      <div class="player">
+        <div class="player-info"></div>
+        <div class="player-img"></div>
+      </div>
     </div>
+    <div class="wrapper right-align">
+    <progress id="cpu-health-bar"></progress>
     <div class="cpu">
       <div class="cpu-info"></div>
       <div class="cpu-img"></div>
     </div>
+    </div>
     </main>
-
-
+    <div class="button-wrapper">
+      <button class="play">Press To Attack!</button>
+    </div>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
