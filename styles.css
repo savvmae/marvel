@@ -9,12 +9,15 @@ universal styles
   box-sizing: border-box;
 }
 body {
-  margin: 0px;
+  margin: 10px;
   font-family: marvel;
   font-size: 22px;
   background: black;
 }
-
+.black-border {
+  border:3px solid black;
+  border-radius: 4px;
+}
 /*******************
 choose character page
 *******************/
@@ -36,10 +39,11 @@ choose character page
   flex-direction: column;
 }
 .thumbnail {
-  height: 215%;
+  height: 150%;
   width: 100%;
 }
 .char-name {
+  height: 75%;
   font-family: marvel;
   font-size: 26px;
 }
@@ -61,6 +65,7 @@ battle page
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-size: 28px;
 }
 .wrapper {
   width: 50%;
@@ -75,19 +80,36 @@ battle page
   margin-right: 10%;
 }
 #cpu-health-bar {
-  margin-left: 70%;
+  margin-left: 60%;
 }
 .button-wrapper {
   display: flex;
   justify-content: center;
 }
-button {
+.play {
   font-family: marvel;
   font-size: 36px;
   border-radius: 5px;
-  margin: 20px;
-  background: white;
-  outline: none;
+  margin: 30px;
+  padding: 30px;
+  background:radial-gradient(ellipse at center, rgba(255,0,0,1) 0%, rgba(100,0,0,1) 100%);
+  border: none;
+  color: black;
+  text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -18px 18px #f20;
+  outline:none;
+}
+.player, .cpu {
+  margin-top: 50%;
+}
+.player {
+  margin-left: 30px;
+}
+.player-info, .cpu-info {
+  color: #000;
+  text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -18px 18px #f20;
+}
+.player-info {
+  margin-left: 10%;
 }
 progress[value] {
   -webkit-appearance: none;
@@ -103,7 +125,69 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
   background-image: -webkit-linear-gradient(left,#c40c09, #1dbf0b);
   border-radius: 2px;
+}
 
+@-webkit-keyframes swing {
+    15% {
+    -webkit-transform: translateX(850px);
+    transform: translateX(850px);
+  }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes swing {
+    15% {
+    -webkit-transform: translateX(850px);
+    transform: translateX(850px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes r-swing {
+    15% {
+    -webkit-transform: translateX(-850px);
+    transform: translateX(-850px);
+  }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes r-swing {
+    15% {
+    -webkit-transform: translateX(-850px);
+    transform: translateX(-850px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.swing {
+  -webkit-animation: swing .5s ease-in;
+  animation: swing .5s ease-in;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.r-swing {
+  -webkit-animation: r-swing .5s ease-in;
+  animation: r-swing .5s ease-in;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.grow {
+  -webkit-transform: scale(3);
+  -ms-transform: scale(3);
+  transform: scale(3);
+  -webkit-animation: r-swing .75s ease-out;
+  animation: r-swing .75s ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 .stage1 {
   background: url('./images/stage1.gif') no-repeat center center ;
