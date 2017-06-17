@@ -1,9 +1,10 @@
-
+/*******************
+universal styles
+*******************/
 @font-face {
     font-family: marvel;
     src: url('./masked_marvel/mask.ttf');
 }
-
 * {
   box-sizing: border-box;
 }
@@ -11,8 +12,18 @@ body {
   margin: 0px;
   font-family: marvel;
   font-size: 22px;
+  background: black;
 }
-main {
+
+/*******************
+choose character page
+*******************/
+.white-large {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+.choose-char-main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -37,4 +48,62 @@ button {
 }
 .char-info {
   height: 40%;
+}
+
+/*******************
+battle page
+*******************/
+
+.battle-main {
+  margin-top: 10%;
+  height: 100%;
+  width: 100%;
+}
+.stage1 {
+  background: url('./images/stage1.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage2 {
+  background: url('./images/stage2.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage3 {
+  background: url('./images/stage3.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage5 {
+  background: url('./images/stage5.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage6 {
+  background: url('./images/stage6.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage7 {
+  background: url('./images/stage7.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

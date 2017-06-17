@@ -1,11 +1,42 @@
 var PUBLIC_KEY = "438bf8eda93048d2d8e7fd8c711f3cfc";
 var PRIV_KEY = "926c1bd505c279e6a79f9fefba59022daff90045";
-var main = document.querySelector('main');
+//variables for index
+var main = document.querySelector('.choose-char-main');
 var noImg = 'image_not_available';
 var nums = [];
+
+//variables for both
 var playerHealth;
 var playerDamage;
 
+
+//variables for battle
+var battleMain = document.querySelector('main');
+
+
+
+//functions for battle
+
+
+//chooses random stage background
+function changeBackground() {
+  var backgroundClasses = [
+    'stage1',
+    'stage2',
+    'stage3',
+    'stage5',
+    'stage6',
+    'stage7'
+  ];
+  var currentBackGround = backgroundClasses[Math.floor(Math.random()*5)];
+  console.log(currentBackGround);
+  battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
+}
+
+///functions for index
+
+
+//loops through charInfo and gets health/damage numbers.
 function isNumber(arr) {
   for (i = 0; i < arr.length; i ++){
     if (arr[i].length <= 2) {
@@ -14,22 +45,25 @@ function isNumber(arr) {
   }
 }
 
-
+//function for click on character, sets stats for character
 function handleClick(event) {
-  var playerStats = event.target.textContent;
-  var playerArrayName = playerStats.split("!");
+  var selectedCharacter = event.target.textContent;
+  var playerArrayName = selectedCharacter.split("!");
   var playerName = playerArrayName[0];
-  var playerArrayStats = playerStats.split(" ");
+  var playerArrayStats = selectedCharacter.split(" ");
   isNumber(playerArrayStats);
   playerHealth = nums[0];
   playerDamage = nums[1];
   playerStatsComplete = [playerName, playerHealth, playerDamage];
-  console.log(playerStatsComplete);
+  location.assign("./battle.html");
+  //this ^ reloads all js, tries to set chars again. how to stop this??? separate js file for battle? how to import variable names.
 }
 
+//creates new characters and puts them on page.
 function newChar (results) {
 
   for(var i = 0; i < results.length; i ++){
+    //checks whether image_not_available
     if(results[i].thumbnail.path.indexOf(noImg) === -1){
 
       var charContainer = document.createElement('div');
@@ -53,11 +87,14 @@ function newChar (results) {
     }
   }
 
+//loops through 'buttons' and assigns event listener, calls handleClick when clicked
+
   for(var j = 0; j < allButtons.length; j++) {
     allButtons[j].addEventListener("click", handleClick);
   }
 }
 
+//Pulls data from api, sets results, make IIFE??
 
 function getMarvelResponse() {
 
@@ -81,5 +118,3 @@ function getMarvelResponse() {
       console.log(err);
     });
 };
-
-getMarvelResponse();
