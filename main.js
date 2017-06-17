@@ -4,7 +4,7 @@ var PRIV_KEY = "926c1bd505c279e6a79f9fefba59022daff90045";
 var main = document.querySelector('.choose-char-main');
 var noImg = 'image_not_available';
 var nums = [];
-
+var filteredResults = [];
 //variables for both
 
 var playerHealth;
@@ -28,6 +28,7 @@ var playerImgPath;
 
 var cpuDiv = document.querySelector('.cpu');
 var cpuImgDiv = document.querySelector('.cpu-img');
+var cpuImg = document.createElement('img');
 var cpuInfoDiv = document.querySelector('.cpu-info');
 
 //functions for battle
@@ -44,16 +45,32 @@ function changeBackground() {
   ];
   var currentBackGround = backgroundClasses[Math.floor(Math.random()*5)];
   battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
+  // console.log(localStorage.cpuComplete);
   buildBattle();
   // need to call subsequent functions within each funcion - only one onload allowed
 }
 
-// function buildBattle() {
-//   playerImg.setAttribute('src', playerImgPath);
-//   console.log(playerImgPath);
-// }
-// this function needs a lot of work, but got img src path for player!
-//functions for index
+function buildBattle() {
+
+  var cpuBattle = localStorage.cpuComplete.split(",");
+  var cpuBattleH = cpuBattle[1];
+  var cpuBattleH = cpuBattle[2];
+  var playerBattle = localStorage.playerComplete.split(",");
+  var playerBattleH = playerBattle[1];
+  var playerBattleD = playerBattle[2];
+
+  //append info to html
+  playerInfoDiv.textContent = playerBattle[0] + " Health: " + playerBattle[1] + " Damage: " + playerBattle[2];
+  playerImg.setAttribute('src', playerBattle[3]);
+  playerImgDiv.appendChild(playerImg);
+
+  cpuInfoDiv.textContent = cpuBattle[0] + " Health: " + cpuBattle[1] + " Damage: " + cpuBattle[2];
+  cpuImg.setAttribute('src', cpuBattle[3]);
+  cpuImgDiv.appendChild(cpuImg);
+
+
+}
+
 
 
 //loops through charInfo and gets health/damage numbers.
@@ -69,15 +86,15 @@ function isNumber(arr) {
 function handleClick(event) {
   var selectedCharacter = event.target.textContent;
   playerImgPath = event.target.previousElementSibling.src;
-  //this is the src of href, need to troubleshoot
   var playerArrayName = selectedCharacter.split("!");
   var playerName = playerArrayName[0];
   var playerArrayStats = selectedCharacter.split(" ");
   isNumber(playerArrayStats);
   playerHealth = parseInt(nums[0]);
   playerDamage = parseInt(nums[1]);
-  playerStatsComplete = [playerName, playerHealth, playerDamage];
-  // location.assign("./battle.html");
+  playerStatsComplete = [playerName, playerHealth, playerDamage, playerImgPath];
+  localStorage.playerComplete = playerStatsComplete.toString();
+  location.assign("./battle.html");
 }
 
 //creates new characters and puts them on page.
@@ -86,7 +103,7 @@ function newChar (results) {
   for(var i = 0; i < results.length; i ++){
     //checks whether image_not_available
     if(results[i].thumbnail.path.indexOf(noImg) === -1){
-
+      filteredResults.push(results[i]);
       var charContainer = document.createElement('div');
       var charInfo = document.createElement('div');
       var charName = document.createElement('button');
@@ -105,9 +122,11 @@ function newChar (results) {
       charContainer.appendChild(charInfo);
       main.appendChild(charContainer);
       var allButtons = document.querySelectorAll('button');
-    }
-  }
 
+    }
+
+  }
+  randomCharGenerator(filteredResults);
 //loops through 'buttons' and assigns event listener, calls handleClick when clicked
 
   for(var j = 0; j < allButtons.length; j++) {
@@ -123,7 +142,8 @@ function randomCharGenerator(results) {
   randomCharImgPath = randomChar.thumbnail.path + "/standard_large." + randomChar.thumbnail.extension;
   cpuHealth = Math.floor(Math.random() * (20 - 1 )) + 1;
   cpuDamage = Math.floor(Math.random() * (5 - 1 )) + 1;
-  cpuStats = [cpuCharName, cpuHealth, cpuDamage];
+  cpuStats = [cpuCharName, cpuHealth, cpuDamage, randomCharImgPath];
+  localStorage.cpuComplete = cpuStats.toString();
 }
 //Pulls data from api, sets results, make IIFE??
 
@@ -144,7 +164,6 @@ function getMarvelResponse() {
     .done(function(data) {
         charResults = data.data.results;
         newChar(charResults)
-        randomCharGenerator(charResults);
     })
     .fail(function(err){
       console.log(err);
