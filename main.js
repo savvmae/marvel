@@ -26,7 +26,8 @@ var cpuDiv = document.querySelector('.cpu');
 var cpuImgDiv = document.querySelector('.cpu-img');
 var cpuInfoDiv = document.querySelector('.cpu-info');
 var cpuHB = document.querySelector('#cpu-health-bar');
-var playButton = document.querySelector('.play');
+var hitButton = document.querySelector('.hit');
+var kickButton = document.querySelector('.kick');
 
 
 var randomChar;
@@ -60,7 +61,8 @@ function changeBackground() {
   var currentBackGround = backgroundClasses[Math.floor(Math.random()*5)];
   battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
   buildBattle();
-  playButton.addEventListener('click', battle);
+  hitButton.addEventListener('click', battle);
+  kickButton.addEventListener('click', battle);
 }
 //builds characters in battle stage
 function buildBattle() {
@@ -72,8 +74,6 @@ function buildBattle() {
     playerBattleH = playerBattle[1];
     playerBattleD = playerBattle[2];
     playerBattleD2 = playerBattle[3];
-    console.log(cpuBattle);
-    console.log(playerBattle);
 
     //append info to html
     playerInfoDiv.textContent = playerBattle[0];
@@ -91,23 +91,30 @@ function buildBattle() {
 }
 
 //the battle!
+
+// want to implement the 2 varieties of damage here. will take some restructuring of the logic.
 function battle() {
-  if (cpuBattleH > 0 && playerBattleH > 0) {
-    cpuBattleH -= playerBattleD;
-    cpuHB.setAttribute('value', cpuBattleH);
-    playerImg.setAttribute('class', 'swing black-border');
-    remSwing(playerImg);
-      if (cpuBattleH <= 0) {
-        return alertDelay(playerImg);
-      }
-    cpuAttackDelay();
-    playerBattleH -= cpuBattleD;
-    console.log(playerBattleH);
-      if(playerBattleH <= 0) {
-        return alertDelay(cpuImg);
+if (cpuBattleH > 0 && playerBattleH > 0) {
+    if (event.target.className === 'hit'){
+      cpuBattleH -= playerBattleD2;
+    }
+    else if (event.target.className === 'kick') {
+      cpuBattleH -= playerBattleD;
+    }
+      cpuHB.setAttribute('value', cpuBattleH);
+      playerImg.setAttribute('class', 'swing black-border');
+      remSwing(playerImg);
+        if (cpuBattleH <= 0) {
+          return alertDelay(playerImg);
+        }
+      cpuAttackDelay();
+      playerBattleH -= cpuBattleD2;
+        if(playerBattleH <= 0) {
+          return alertDelay(cpuImg);
       }
     }
-}
+  }
+
 
 //removes animation so that it can be reassigned at next move
 function remSwing(img) {
@@ -163,7 +170,7 @@ function handleClick(event) {
   playerDamage2 = parseInt(nums[2])
   playerStatsComplete = [playerName, playerHealth, playerDamage, playerDamage2, playerImgPath];
   localStorage.playerComplete = playerStatsComplete.toString();
-  // location.assign("./battle.html");
+  location.assign("./battle.html");
 }
 
 //creates new characters and puts them on page.

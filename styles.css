@@ -83,7 +83,7 @@ battle page
   display: flex;
   justify-content: center;
 }
-.play {
+.hit, .kick {
   font-family: marvel;
   font-size: 36px;
   border-radius: 5px;
