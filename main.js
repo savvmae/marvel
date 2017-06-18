@@ -226,17 +226,18 @@ function getMarvelResponse() {
 
   var ts = new Date().getTime();
   var hash = md5(ts + PRIV_KEY + PUBLIC_KEY).toString();
-  var url = 'http://gateway.marvel.com:80/v1/public/characters';
+  var url = 'http://gateway.marvel.com/v1/public/events/238/characters';
   var charResults;
 
   $.getJSON(url, {
     ts: ts,
     apikey: PUBLIC_KEY,
     hash: hash,
-    limit: 89
+    limit: 100
     })
     .done(function(data) {
         charResults = data.data.results;
+        console.log(charResults);
         newChar(charResults)
     })
     .fail(function(err){
