@@ -182,7 +182,7 @@ function newChar (results) {
       var charContainer = document.createElement('div');
       var charInfo = document.createElement('div');
       var charButton = document.createElement('button');
-      var charImgPath = results[i].thumbnail.path + "/standard_large." + results[i].thumbnail.extension;
+      var charImgPath = results[i].thumbnail.path + "/standard_fantastic." + results[i].thumbnail.extension;
       var charImg = document.createElement('img');
       charContainer.setAttribute('class', 'char-container');
       charInfo.setAttribute('class', 'char-info');
@@ -213,7 +213,7 @@ function newChar (results) {
 function randomCharGenerator(results) {
   randomChar = results[Math.floor(Math.random()*results.length)];
   var cpuCharName = randomChar.name;
-  randomCharImgPath = randomChar.thumbnail.path + "/standard_large." + randomChar.thumbnail.extension;
+  randomCharImgPath = randomChar.thumbnail.path + "/standard_fantastic." + randomChar.thumbnail.extension;
   cpuHealth = Math.floor(Math.random() * (20 - 1 )) + 1;
   cpuDamage = Math.floor(Math.random() * (5 - 1 )) + 1;
   cpuDamage2 = Math.floor(Math.random() * (5 - 1 )) + 1;
@@ -237,7 +237,6 @@ function getMarvelResponse() {
     })
     .done(function(data) {
         charResults = data.data.results;
-        console.log(charResults);
         newChar(charResults)
     })
     .fail(function(err){
