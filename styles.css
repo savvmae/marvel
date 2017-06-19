@@ -21,9 +21,11 @@ body {
 button {
   cursor: pointer;
 }
+
 /*******************
 choose character page
 *******************/
+
 .white-large {
   color: white;
   font-size: 60px;
@@ -212,6 +214,14 @@ progress[value]::-webkit-progress-value {
   -o-background-size: cover;
   background-size: cover;
 }
+.stage4 {
+  background: url('./images/stage4.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .stage5 {
   background: url('./images/stage5.gif') no-repeat center center ;
   height: 500px;
@@ -230,6 +240,39 @@ progress[value]::-webkit-progress-value {
 }
 .stage7 {
   background: url('./images/stage7.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.stage8 {
+  background: url('./images/stage8.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage9 {
+  background: url('./images/stage9.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage10 {
+  background: url('./images/stage10.gif') no-repeat center center ;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.stage11 {
+  background: url('./images/stage11.gif') no-repeat center center ;
   height: 500px;
   -webkit-background-size: cover;
   -moz-background-size: cover;

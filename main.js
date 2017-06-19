@@ -54,11 +54,16 @@ function changeBackground() {
     'stage1',
     'stage2',
     'stage3',
+    'stage4',
     'stage5',
     'stage6',
-    'stage7'
+    'stage7',
+    'stage8',
+    'stage9',
+    'stage10',
+    'stage11'
   ];
-  var currentBackGround = backgroundClasses[Math.floor(Math.random()*5)];
+  var currentBackGround = backgroundClasses[Math.floor(Math.random()*11)];
   battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
   buildBattle();
   hitButton.addEventListener('click', battle);
