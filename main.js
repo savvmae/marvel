@@ -7,10 +7,6 @@ var noImg = 'image_not_available';
 var nums = [];
 var filteredResults = [];
 
-//variables for both
-
-
-
 //variables for battle
 var battleMain = document.querySelector('main');
 var playerDiv = document.querySelector('.player');
@@ -23,7 +19,6 @@ var cpuInfoDiv = document.querySelector('.cpu-info');
 var cpuHB = document.querySelector('#cpu-health-bar');
 var hitButton = document.querySelector('.hit');
 var kickButton = document.querySelector('.kick');
-
 
 var randomChar;
 var randomCharImgPath;
@@ -54,7 +49,7 @@ function getMarvelResponse() {
     })
     .done(function(data) {
         charResults = data.data.results;
-        newChar(charResults)
+        newChar(charResults);
     })
     .fail(function(err){
       console.log(err);
@@ -72,7 +67,15 @@ function newChar (results) {
   for(var i = 0; i < results.length; i ++){
     //checks whether image_not_available
     if(results[i].thumbnail.path.indexOf(noImg) === -1){
-
+      var charImgPath = results[i].thumbnail.path + "/standard_fantastic." + results[i].thumbnail.extension;
+      var charHitValue = Math.floor(Math.random() * (5 - 1 )) + 1;
+      var charKickValue = Math.floor(Math.random() * (5 - 1 )) + 1;
+      var charHealthValue = Math.floor(Math.random() * (20 - 1 )) + 1;
+      var importantInfo = [results[i].name, charHealthValue, charHitValue, charKickValue, charImgPath];
+      filteredResults.push(importantInfo);
+    }
+  }
+  for(var k = 0; k < filteredResults.length; k ++){
       var charContainer = document.createElement('div');
       var charInfo = document.createElement('div');
       var charButton = document.createElement('button');
@@ -80,26 +83,22 @@ function newChar (results) {
       var charHealth = document.createElement('p');
       var charHit = document.createElement('p');
       var charKick = document.createElement('p');
-      var charHitValue = Math.floor(Math.random() * (5 - 1 )) + 1;
-      var charKickValue = Math.floor(Math.random() * (5 - 1 )) + 1;
-      var charHealthValue = Math.floor(Math.random() * (20 - 1 )) + 1;
-      var charImgPath = results[i].thumbnail.path + "/standard_fantastic." + results[i].thumbnail.extension;
       var charImg = document.createElement('img');
 
       charContainer.setAttribute('class', 'char-container');
       charInfo.setAttribute('class', 'char-info');
       charButton.setAttribute('class', 'char-button');
       charImg.setAttribute('class', 'thumbnail');
-      charImg.setAttribute('src', charImgPath);
+      charImg.setAttribute('src', filteredResults[k][4]);
       charName.setAttribute('class', 'name text-fire');
       charHealth.setAttribute('class', 'stats');
       charHit.setAttribute('class', 'stats');
       charKick.setAttribute('class', 'stats');
 
-      charName.textContent = results[i].name + "!";
-      charHealth.textContent = "Health: " + charHealthValue;
-      charHit.textContent = "Hit Damage: " + charHitValue;
-      charKick.textContent = "Kick Damage: " + charKickValue;
+      charName.textContent = filteredResults[k][0] + "!";
+      charHealth.textContent = "Health: " + filteredResults[k][1];
+      charHit.textContent = "Hit Damage: " + filteredResults[k][2];
+      charKick.textContent = "Kick Damage: " + filteredResults[k][3];
       charButton.textContent ="Select";
 
       charInfo.appendChild(charImg);
@@ -108,18 +107,14 @@ function newChar (results) {
       charInfo.appendChild(charHit);
       charInfo.appendChild(charKick);
       charInfo.appendChild(charButton);
-      charButton.setAttribute('value', [i]);
+      charButton.setAttribute('value', [k]);
       charContainer.appendChild(charInfo);  main.appendChild(charContainer);
 
-      var importantInfo = [results[i].name, charHealthValue, charHitValue, charKickValue, charImgPath];
       var allButtons = document.querySelectorAll('button');
-      filteredResults.push(importantInfo);
     }
-  }
   randomCharGenerator(filteredResults);
 
 //loops through 'buttons' and assigns event listener, calls handleClick when clicked
-
   for(var j = 0; j < allButtons.length; j++) {
     allButtons[j].addEventListener("click", handleClick);
   }
@@ -155,6 +150,7 @@ function changeBackground() {
   hitButton.addEventListener('click', battle);
   kickButton.addEventListener('click', battle);
 }
+
 //builds characters in battle stage
 function buildBattle() {
     var cpuBattle = localStorage.cpuComplete.split(",");
@@ -183,7 +179,6 @@ function buildBattle() {
 
 //the battle!
 
-// want to implement the 2 varieties of damage here. will take some restructuring of the logic.
 function battle() {
 if (cpuBattleH > 0 && playerBattleH > 0) {
     if (event.target.className === 'hit'){
