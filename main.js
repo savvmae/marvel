@@ -177,14 +177,35 @@ function buildBattle() {
     playerHBar.setAttribute('value', playerBattleH);
 }
 
+//attack sound affects randomizer
+function playRandomSnippet() {
+  var snippets = [
+    './audio/attack1.wav',
+    './audio/attack2.wav',
+    './audio/attack3.wav',
+    './audio/attack4.wav',
+    './audio/attack5.wav',
+    './audio/attack6.wav',
+    './audio/attack7.wav',
+    './audio/attack8.wav',
+    './audio/attack9.wav',
+    './audio/attack10.wav'
+  ];
+  var snippet = snippets[Math.floor(Math.random()*10)];
+  var clip = new Audio(snippet);
+  clip.play();
+}
+
 //the battle!
 
 function battle() {
 if (cpuBattleH > 0 && playerBattleH > 0) {
     if (event.target.className === 'hit'){
+      playRandomSnippet();
       cpuBattleH -= playerBattleD2;
     }
     else if (event.target.className === 'kick') {
+      playRandomSnippet();
       cpuBattleH -= playerBattleD;
     }
       cpuHB.setAttribute('value', cpuBattleH);
@@ -213,6 +234,7 @@ function remSwing(img) {
 //delays attack of cpu so that characters aren't attacking simultaneously
 function cpuAttackDelay() {
   setTimeout(function() {
+    playRandomSnippet();
     cpuImg.setAttribute('class', 'r-swing black-border-fifty');
     playerHBar.setAttribute('value', playerBattleH);
     remSwing(cpuImg);
@@ -223,6 +245,8 @@ function cpuAttackDelay() {
 function alertDelay(winner) {
   setTimeout(function() {
     if (winner === playerImg) {
+      var clip = new Audio('./audio/win.mp3');
+      clip.play();
       winner.setAttribute('class', 'r-grow black-border-fifty');
       // var winMessage = document.createElement('p');
       // winMessage.textContent = "YOU WIN!";
@@ -230,6 +254,8 @@ function alertDelay(winner) {
       // Work on displaying dancing win message!
       delayReset();
     } else {
+      var clip = new Audio('./audio/game-over.wav');
+      clip.play();
       winner.setAttribute('class', 'grow black-border-fifty');
       delayReset();
     }
