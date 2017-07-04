@@ -7,8 +7,7 @@ var noImg = 'image_not_available';
 var nums = [];
 var filteredResults = [];
 var video = document.querySelector('video');
-
-
+var videoContainer = document.querySelector('.video-container');
 
 //variables for battle
 var battleMain = document.querySelector('main');
@@ -40,7 +39,9 @@ var cpuImg = document.createElement('img');
 
 //Pulls data from api, sets results
 function getMarvelResponse() {
-  video.addEventListener('ended', removeVideo);
+
+  video.addEventListener('ended', removeVideoPlaySong);
+
   var ts = new Date().getTime();
   var hash = md5(ts + PRIV_KEY + PUBLIC_KEY).toString();
   var url = 'http://gateway.marvel.com/v1/public/events/238/characters';
@@ -63,8 +64,18 @@ function getMarvelResponse() {
 
 //removes intro video
 
-function removeVideo() {
+function removeVideoPlaySong() {
   video.remove();
+  videoContainer.remove();
+  loopSong();
+}
+
+function loopSong() {
+  var backgroundSong = document.createElement('audio');
+  backgroundSong.setAttribute('src', './audio/choose-character-song.mp3');
+  backgroundSong.setAttribute('autoplay', 'autoplay');
+  backgroundSong.play();
+  backgroundSong.loop = true;
 }
 
 //creates random character **computer
@@ -153,13 +164,14 @@ function changeBackground() {
   ];
   var currentBackGround = backgroundClasses[Math.floor(Math.random()*11)];
   battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
-  buildBattle();
   hitButton.addEventListener('click', battle);
   kickButton.addEventListener('click', battle);
 }
 
 //builds characters in battle stage
 function buildBattle() {
+
+    changeBackground();
     bannerElement.remove();
     var cpuBattle = localStorage.cpuComplete.split(",");
     cpuBattleH = cpuBattle[1];
@@ -255,17 +267,22 @@ function banner(message) {
   bannerElement.setAttribute('class', 'banner victory text-fire');
   battleMain.appendChild(bannerElement);
 }
-// function removeBanner() {
-  // bannerElement.textContent="";
-  // bannerElement.removeAttribute('class', 'banner victory text-fire');
-// }
 
 //delays the win dance so that the progress bar and attack animation can happen first.
+
+
+
 function alertDelay(winner) {
   setTimeout(function() {
     if (winner === playerImg) {
       var clip = new Audio('./audio/win.mp3');
+      // var clip2 = new Audio('./audio/congrats-song.mp3');
+      // clip2.pause();
+      // clip2.currentTime = 0;
+      // need to figure out a way to get the clip to stop playing...
+      // when clip is defined globally, play will not run, when defined locally so play will run, pause will not run. will wait to implement stage songs until this issue has been resolved.
       clip.play();
+      // clip2.play();
       banner("YOU WIN!!!");
       winner.setAttribute('class', 'r-grow black-border-fifty');
       delayReset();
