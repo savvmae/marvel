@@ -94,31 +94,27 @@ function newChar (results) {
       var charHealth = document.createElement('p');
       var charHit = document.createElement('p');
       var charKick = document.createElement('p');
-      var charImg = document.createElement('img');
 
       charContainer.setAttribute('class', 'char-container');
       charInfo.setAttribute('class', 'char-info');
       charButton.setAttribute('class', 'char-button');
-      charImg.setAttribute('class', 'thumbnail');
-      charImg.setAttribute('src', filteredResults[k][4]);
+      charButton.style.backgroundImage = 'url('+filteredResults[k][4]+')';
       charName.setAttribute('class', 'name text-fire');
-      charHealth.setAttribute('class', 'stats');
-      charHit.setAttribute('class', 'stats');
-      charKick.setAttribute('class', 'stats');
+      charHealth.setAttribute('class', 'stats top');
+      charHit.setAttribute('class', 'stats middle');
+      charKick.setAttribute('class', 'stats bottom');
 
       charName.textContent = filteredResults[k][0] + "!";
       charHealth.textContent = "Health: " + filteredResults[k][1];
       charHit.textContent = "Hit Damage: " + filteredResults[k][2];
       charKick.textContent = "Kick Damage: " + filteredResults[k][3];
-      charButton.textContent ="Select";
 
-      charInfo.appendChild(charImg);
+      charButton.setAttribute('value', [k]);
+      charInfo.appendChild(charButton);
       charInfo.appendChild(charName);
       charInfo.appendChild(charHealth);
       charInfo.appendChild(charHit);
       charInfo.appendChild(charKick);
-      charInfo.appendChild(charButton);
-      charButton.setAttribute('value', [k]);
       charContainer.appendChild(charInfo);  main.appendChild(charContainer);
 
       var allButtons = document.querySelectorAll('button');
