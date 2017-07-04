@@ -6,6 +6,9 @@ var main = document.querySelector('.choose-char-main');
 var noImg = 'image_not_available';
 var nums = [];
 var filteredResults = [];
+var video = document.querySelector('video');
+
+
 
 //variables for battle
 var battleMain = document.querySelector('main');
@@ -19,6 +22,8 @@ var cpuInfoDiv = document.querySelector('.cpu-info');
 var cpuHB = document.querySelector('#cpu-health-bar');
 var hitButton = document.querySelector('.hit');
 var kickButton = document.querySelector('.kick');
+
+var bannerElement = document.createElement('div');
 
 var randomChar;
 var randomCharImgPath;
@@ -35,7 +40,7 @@ var cpuImg = document.createElement('img');
 
 //Pulls data from api, sets results
 function getMarvelResponse() {
-
+  video.addEventListener('ended', removeVideo);
   var ts = new Date().getTime();
   var hash = md5(ts + PRIV_KEY + PUBLIC_KEY).toString();
   var url = 'http://gateway.marvel.com/v1/public/events/238/characters';
@@ -55,6 +60,12 @@ function getMarvelResponse() {
       console.log(err);
     });
 };
+
+//removes intro video
+
+function removeVideo() {
+  video.remove();
+}
 
 //creates random character **computer
 function randomCharGenerator(results) {
@@ -153,6 +164,7 @@ function changeBackground() {
 
 //builds characters in battle stage
 function buildBattle() {
+    bannerElement.remove();
     var cpuBattle = localStorage.cpuComplete.split(",");
     cpuBattleH = cpuBattle[1];
     cpuBattleD = cpuBattle[2];
@@ -241,21 +253,30 @@ function cpuAttackDelay() {
   }, 500);
 }
 
+//creates banner for end of game-over
+function banner(message) {
+  bannerElement.textContent = message;
+  bannerElement.setAttribute('class', 'banner victory text-fire');
+  battleMain.appendChild(bannerElement);
+}
+// function removeBanner() {
+  // bannerElement.textContent="";
+  // bannerElement.removeAttribute('class', 'banner victory text-fire');
+// }
+
 //delays the win dance so that the progress bar and attack animation can happen first.
 function alertDelay(winner) {
   setTimeout(function() {
     if (winner === playerImg) {
       var clip = new Audio('./audio/win.mp3');
       clip.play();
+      banner("YOU WIN!!!");
       winner.setAttribute('class', 'r-grow black-border-fifty');
-      // var winMessage = document.createElement('p');
-      // winMessage.textContent = "YOU WIN!";
-      // battleMain.appendChild(winMessage);
-      // Work on displaying dancing win message!
       delayReset();
     } else {
       var clip = new Audio('./audio/game-over.wav');
       clip.play();
+      banner("YOU LOSE!!!");
       winner.setAttribute('class', 'grow black-border-fifty');
       delayReset();
     }
