@@ -167,10 +167,36 @@ function changeBackground() {
   hitButton.addEventListener('click', battle);
   kickButton.addEventListener('click', battle);
 }
+//set variable globally so it can be paused.
+// var stageSongs = [
+//   './audio/stage-song1.mp3',
+//   './audio/stage-song2.mp3',
+//   './audio/stage-song3.mp3',
+//   './audio/stage-song4.mp3'
+// ];
+// var stageSong =
+// function stageSong() {
+//
+//   var snippet = snippets[Math.floor(Math.random() * 4)];
+//   var clip = new Audio(snippet);
+//   clip.play();
+// }
+//
+// function stageSongRet(idx) {
+//   var snippet = snippets[idx || Math.floor(Math.random() * 4)];
+//   var clip = new Audio(snippet);
+//   return clip
+// }
+//
+// function rando () {
+//   // do stuff
+//   const newSong = stageSongRet()
+//   newSong.play()
+// }
 
 //builds characters in battle stage
 function buildBattle() {
-
+    // stageSong();
     changeBackground();
     bannerElement.remove();
     var cpuBattle = localStorage.cpuComplete.split(",");
@@ -269,26 +295,23 @@ function banner(message) {
 }
 
 //delays the win dance so that the progress bar and attack animation can happen first.
-
-
+var winSong = new Audio('./audio/congrats-song.mp3');
+var loseSong = new Audio('./audio/lose-song.mp3');
 
 function alertDelay(winner) {
   setTimeout(function() {
     if (winner === playerImg) {
-      var clip = new Audio('./audio/win.mp3');
-      // var clip2 = new Audio('./audio/congrats-song.mp3');
-      // clip2.pause();
-      // clip2.currentTime = 0;
-      // need to figure out a way to get the clip to stop playing...
-      // when clip is defined globally, play will not run, when defined locally so play will run, pause will not run. will wait to implement stage songs until this issue has been resolved.
-      clip.play();
-      // clip2.play();
+
+      var cheer = new Audio('./audio/win.mp3');
+      cheer.play();
+      winSong.play();
       banner("YOU WIN!!!");
       winner.setAttribute('class', 'r-grow black-border-fifty');
       delayReset();
     } else {
-      var clip = new Audio('./audio/game-over.wav');
-      clip.play();
+      var gameOver = new Audio('./audio/game-over.wav');
+      gameOver.play();
+      loseSong.play();
       banner("YOU LOSE!!!");
       winner.setAttribute('class', 'grow black-border-fifty');
       delayReset();
@@ -299,6 +322,8 @@ function alertDelay(winner) {
 //delays the reset of the battlefield so that the win dance can happen
 function delayReset() {
     setTimeout(function(){
+      winSong.pause();
+      loseSong.pause();
       buildBattle();
-    }, 4000);
+    }, 5000);
 }
