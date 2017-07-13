@@ -44,7 +44,7 @@ function getMarvelResponse() {
 
   var ts = new Date().getTime();
   var hash = md5(ts + PRIV_KEY + PUBLIC_KEY).toString();
-  var url = 'http://gateway.marvel.com/v1/public/events/238/characters';
+  var url = 'https://gateway.marvel.com/v1/public/events/238/characters';
   var charResults;
 
   $.getJSON(url, {
