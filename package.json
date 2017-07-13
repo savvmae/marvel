@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/savvmae/marvel/issues"
   },
-  "homepage": "https://github.com/savvmae/marvel#readme"
+  "homepage": "https://github.com/savvmae/marvel#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
