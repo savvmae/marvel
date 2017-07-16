@@ -1,0 +1,14 @@
+-- add progress bar for special move juice??
+
+-- add speical move for cpu******************DONE
+
+-- change player progress bars to go red to green
+
+-- add cycle of battles with random characters
+
+-- separate main.js into modules
+
+-- make responsive
+
+-- swing animation creates scroll bar for a few seconds on win/lose banner
+

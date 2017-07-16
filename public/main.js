@@ -21,6 +21,7 @@ var cpuInfoDiv = document.querySelector('.cpu-info');
 var cpuHB = document.querySelector('#cpu-health-bar');
 var hitButton = document.querySelector('.hit');
 var kickButton = document.querySelector('.kick');
+var buttonWrapper = document.querySelector('.button-wrapper');
 
 var bannerElement = document.createElement('div');
 
@@ -52,12 +53,12 @@ function getMarvelResponse() {
     apikey: PUBLIC_KEY,
     hash: hash,
     limit: 100
+  })
+    .done(function (data) {
+      charResults = data.data.results;
+      newChar(charResults);
     })
-    .done(function(data) {
-        charResults = data.data.results;
-        newChar(charResults);
-    })
-    .fail(function(err){
+    .fail(function (err) {
       console.log(err);
     });
 };
@@ -80,60 +81,60 @@ function loopSong() {
 
 //creates random character **computer
 function randomCharGenerator(results) {
-  var cpuStats = results[Math.floor(Math.random()*results.length)];
+  var cpuStats = results[Math.floor(Math.random() * results.length)];
   localStorage.cpuComplete = cpuStats.toString();
 }
 
 //creates new characters and puts them on page.
-function newChar (results) {
-  for(var i = 0; i < results.length; i ++){
+function newChar(results) {
+  for (var i = 0; i < results.length; i++) {
     //checks whether image_not_available
-    if(results[i].thumbnail.path.indexOf(noImg) === -1){
+    if (results[i].thumbnail.path.indexOf(noImg) === -1) {
       var charImgPath = results[i].thumbnail.path + "/standard_fantastic." + results[i].thumbnail.extension;
-      var charHitValue = Math.floor(Math.random() * (5 - 1 )) + 1;
-      var charKickValue = Math.floor(Math.random() * (5 - 1 )) + 1;
-      var charHealthValue = Math.floor(Math.random() * (20 - 1 )) + 1;
+      var charHitValue = Math.floor(Math.random() * (5 - 1)) + 1;
+      var charKickValue = Math.floor(Math.random() * (5 - 1)) + 1;
+      var charHealthValue = Math.floor(Math.random() * (20 - 1)) + 1;
       var importantInfo = [results[i].name, charHealthValue, charHitValue, charKickValue, charImgPath];
       filteredResults.push(importantInfo);
     }
   }
-  for(var k = 0; k < filteredResults.length; k ++){
-      var charContainer = document.createElement('div');
-      var charInfo = document.createElement('div');
-      var charButton = document.createElement('button');
-      var charName = document.createElement('p');
-      var charHealth = document.createElement('p');
-      var charHit = document.createElement('p');
-      var charKick = document.createElement('p');
+  for (var k = 0; k < filteredResults.length; k++) {
+    var charContainer = document.createElement('div');
+    var charInfo = document.createElement('div');
+    var charButton = document.createElement('button');
+    var charName = document.createElement('p');
+    var charHealth = document.createElement('p');
+    var charHit = document.createElement('p');
+    var charKick = document.createElement('p');
 
-      charContainer.setAttribute('class', 'char-container');
-      charInfo.setAttribute('class', 'char-info');
-      charButton.setAttribute('class', 'char-button');
-      charButton.style.backgroundImage = 'url('+filteredResults[k][4]+')';
-      charName.setAttribute('class', 'name text-fire');
-      charHealth.setAttribute('class', 'stats top');
-      charHit.setAttribute('class', 'stats middle');
-      charKick.setAttribute('class', 'stats bottom');
+    charContainer.setAttribute('class', 'char-container');
+    charInfo.setAttribute('class', 'char-info');
+    charButton.setAttribute('class', 'char-button');
+    charButton.style.backgroundImage = 'url(' + filteredResults[k][4] + ')';
+    charName.setAttribute('class', 'name text-fire');
+    charHealth.setAttribute('class', 'stats top');
+    charHit.setAttribute('class', 'stats middle');
+    charKick.setAttribute('class', 'stats bottom');
 
-      charName.textContent = filteredResults[k][0] + "!";
-      charHealth.textContent = "Health: " + filteredResults[k][1];
-      charHit.textContent = "Hit Damage: " + filteredResults[k][2];
-      charKick.textContent = "Kick Damage: " + filteredResults[k][3];
+    charName.textContent = filteredResults[k][0] + "!";
+    charHealth.textContent = "Health: " + filteredResults[k][1];
+    charHit.textContent = "Hit Damage: " + filteredResults[k][2];
+    charKick.textContent = "Kick Damage: " + filteredResults[k][3];
 
-      charButton.setAttribute('value', [k]);
-      charInfo.appendChild(charButton);
-      charInfo.appendChild(charName);
-      charInfo.appendChild(charHealth);
-      charInfo.appendChild(charHit);
-      charInfo.appendChild(charKick);
-      charContainer.appendChild(charInfo);  main.appendChild(charContainer);
+    charButton.setAttribute('value', [k]);
+    charInfo.appendChild(charButton);
+    charInfo.appendChild(charName);
+    charInfo.appendChild(charHealth);
+    charInfo.appendChild(charHit);
+    charInfo.appendChild(charKick);
+    charContainer.appendChild(charInfo); main.appendChild(charContainer);
 
-      var allButtons = document.querySelectorAll('button');
-    }
+    var allButtons = document.querySelectorAll('button');
+  }
   randomCharGenerator(filteredResults);
 
-//loops through 'buttons' and assigns event listener, calls handleClick when clicked
-  for(var j = 0; j < allButtons.length; j++) {
+  //loops through 'buttons' and assigns event listener, calls handleClick when clicked
+  for (var j = 0; j < allButtons.length; j++) {
     allButtons[j].addEventListener("click", handleClick);
   }
 }
@@ -162,65 +163,72 @@ function changeBackground() {
     'stage10',
     'stage11'
   ];
-  var currentBackGround = backgroundClasses[Math.floor(Math.random()*11)];
+  var currentBackGround = backgroundClasses[Math.floor(Math.random() * 11)];
   battleMain.setAttribute('class', 'battle-main ' + currentBackGround);
   hitButton.addEventListener('click', battle);
   kickButton.addEventListener('click', battle);
 }
 //set variable globally so it can be paused.
-// var stageSongs = [
-//   './audio/stage-song1.mp3',
-//   './audio/stage-song2.mp3',
-//   './audio/stage-song3.mp3',
-//   './audio/stage-song4.mp3'
-// ];
-// var stageSong =
-// function stageSong() {
-//
-//   var snippet = snippets[Math.floor(Math.random() * 4)];
-//   var clip = new Audio(snippet);
-//   clip.play();
-// }
-//
-// function stageSongRet(idx) {
-//   var snippet = snippets[idx || Math.floor(Math.random() * 4)];
-//   var clip = new Audio(snippet);
-//   return clip
-// }
-//
-// function rando () {
-//   // do stuff
-//   const newSong = stageSongRet()
-//   newSong.play()
-// }
+var stageSongs = [
+  './audio/stage-song1.mp3',
+  './audio/stage-song2.mp3',
+  './audio/stage-song3.mp3',
+  './audio/stage-song4.mp3'
+];
+
+function stageSongRet(idx) {
+  var snippet = stageSongs[idx || Math.floor(Math.random() * 4)];
+  var clip = new Audio(snippet);
+  return clip
+}
+
+var stageSong;
+
+function playStageSong() {
+  stageSong = stageSongRet()
+  stageSong.play()
+  stageSong.loop = true;
+}
+
+function pauseStageSong() {
+  stageSong.pause()
+  stageSong.currentTime = 0;
+}
+
+function pauseWinLoseSong(song) {
+  song.pause()
+  song.currentTime = 0;
+}
 
 //builds characters in battle stage
 function buildBattle() {
-    // stageSong();
-    changeBackground();
-    bannerElement.remove();
-    var cpuBattle = localStorage.cpuComplete.split(",");
-    cpuBattleH = cpuBattle[1];
-    cpuBattleD = cpuBattle[2];
-    cpuBattleD2 = cpuBattle[3];
-    var playerBattle = localStorage.playerComplete.split(",");
-    playerBattleH = playerBattle[1];
-    playerBattleD = playerBattle[2];
-    playerBattleD2 = playerBattle[3];
+  cpuHitCounter = 0;
+  removeSpecialButton();
+  playStageSong();
+  changeBackground();
+  bannerElement.remove();
+  var cpuBattle = localStorage.cpuComplete.split(",");
+  cpuBattleH = cpuBattle[1];
+  cpuBattleD = cpuBattle[2];
+  cpuBattleD2 = cpuBattle[3];
+  var playerBattle = localStorage.playerComplete.split(",");
+  playerBattleH = playerBattle[1];
+  playerBattleD = playerBattle[2];
+  playerBattleD2 = playerBattle[3];
 
-    //append info to html
-    playerInfoDiv.textContent = playerBattle[0];
-    playerImg.setAttribute('src', playerBattle[4]);
-    playerImg.setAttribute('class', 'black-border-fifty');
-    playerImgDiv.appendChild(playerImg);
-    cpuInfoDiv.textContent = cpuBattle[0];
-    cpuImg.setAttribute('src', cpuBattle[4]);
-    cpuImg.setAttribute('class', 'black-border-fifty');
-    cpuImgDiv.appendChild(cpuImg);
-    cpuHB.setAttribute('max', cpuBattleH);
-    playerHBar.setAttribute('max', playerBattleH);
-    cpuHB.setAttribute('value', cpuBattleH);
-    playerHBar.setAttribute('value', playerBattleH);
+  //append info to html
+  playerInfoDiv.textContent = playerBattle[0];
+  playerImg.setAttribute('src', playerBattle[4]);
+  playerImg.setAttribute('class', 'black-border-fifty');
+  playerImgDiv.appendChild(playerImg);
+  cpuInfoDiv.textContent = cpuBattle[0];
+  cpuImg.setAttribute('src', cpuBattle[4]);
+  cpuImg.setAttribute('class', 'black-border-fifty');
+  cpuImgDiv.appendChild(cpuImg);
+  cpuHB.setAttribute('max', cpuBattleH);
+  playerHBar.setAttribute('max', playerBattleH);
+  cpuHB.setAttribute('value', cpuBattleH);
+  playerHBar.setAttribute('value', playerBattleH);
 }
 
 //attack sound affects randomizer
@@ -237,16 +245,44 @@ function playRandomSnippet() {
     './audio/attack9.wav',
     './audio/attack10.wav'
   ];
-  var snippet = snippets[Math.floor(Math.random()*10)];
+  var snippet = snippets[Math.floor(Math.random() * 10)];
   var clip = new Audio(snippet);
   clip.play();
 }
 
 //the battle!
+var playerHitCounter = 0;
+var cpuHitCounter = 0;
+var specialButton = document.createElement('button');
+
+function specialButtonCreator() {
+  if (buttonWrapper.contains(specialButton)) {
+    return
+  } else {
+    specialButton.setAttribute('class', 'special');
+    specialButton.textContent = "Special"
+    specialButton.addEventListener('click', battle);
+    buttonWrapper.appendChild(specialButton);
+  }
+}
+
+function removeSpecialButton() {
+  playerHitCounter = 0;
+  if (buttonWrapper.contains(specialButton)) {
+    buttonWrapper.removeChild(specialButton);
+  } else {
+    return
+  }
+}
 
 function battle() {
-if (cpuBattleH > 0 && playerBattleH > 0) {
-    if (event.target.className === 'hit'){
+
+  if (cpuBattleH > 0 && playerBattleH > 0) {
+    if (playerHitCounter > 0 && playerHitCounter % 3 === 0) {
+      specialButtonCreator();
+    }
+    playerHitCounter += 1;
+    if (event.target.className === 'hit') {
       playRandomSnippet();
       cpuBattleH -= playerBattleD2;
     }
@@ -254,24 +290,34 @@ if (cpuBattleH > 0 && playerBattleH > 0) {
       playRandomSnippet();
       cpuBattleH -= playerBattleD;
     }
-      cpuHB.setAttribute('value', cpuBattleH);
-      playerImg.setAttribute('class', 'swing black-border-fifty');
-      remSwing(playerImg);
-        if (cpuBattleH <= 0) {
-          return alertDelay(playerImg);
-        }
-      cpuAttackDelay();
+    else if (event.target.className === 'special') {
+      playRandomSnippet();
+      cpuBattleH -= playerBattleD * 2;
+      removeSpecialButton();
+    }
+    cpuHB.setAttribute('value', cpuBattleH);
+    playerImg.setAttribute('class', 'swing black-border-fifty');
+    remSwing(playerImg);
+    if (cpuBattleH <= 0) {
+      return alertDelay(playerImg);
+    }
+    cpuAttackDelay();
+    cpuHitCounter += 1;
+    if (cpuHitCounter > 0 && cpuHitCounter % 3 === 0) {
+      playerBattleH -= cpuBattleD2 * 2;
+      cpuHitCounter = 0;
+    } else {
       playerBattleH -= cpuBattleD2;
-        if(playerBattleH <= 0) {
-          return alertDelay(cpuImg);
-      }
+    }
+    if (playerBattleH <= 0) {
+      return alertDelay(cpuImg);
+    }
   }
 }
 
-
 //removes animation so that it can be reassigned at next move
 function remSwing(img) {
-  setTimeout(function() {
+  setTimeout(function () {
     img.removeAttribute('class', 'swing');
     img.setAttribute('class', 'black-border-fifty');
   }, 500);
@@ -279,7 +325,7 @@ function remSwing(img) {
 
 //delays attack of cpu so that characters aren't attacking simultaneously
 function cpuAttackDelay() {
-  setTimeout(function() {
+  setTimeout(function () {
     playRandomSnippet();
     cpuImg.setAttribute('class', 'r-swing black-border-fifty');
     playerHBar.setAttribute('value', playerBattleH);
@@ -299,10 +345,10 @@ var winSong = new Audio('./audio/congrats-song.mp3');
 var loseSong = new Audio('./audio/lose-song.mp3');
 
 function alertDelay(winner) {
-  setTimeout(function() {
+  setTimeout(function () {
     if (winner === playerImg) {
-
       var cheer = new Audio('./audio/win.mp3');
+      pauseStageSong();
       cheer.play();
       winSong.play();
       banner("YOU WIN!!!");
@@ -310,6 +356,7 @@ function alertDelay(winner) {
       delayReset();
     } else {
       var gameOver = new Audio('./audio/game-over.wav');
+      pauseStageSong();
       gameOver.play();
       loseSong.play();
       banner("YOU LOSE!!!");
@@ -321,9 +368,9 @@ function alertDelay(winner) {
 
 //delays the reset of the battlefield so that the win dance can happen
 function delayReset() {
-    setTimeout(function(){
-      winSong.pause();
-      loseSong.pause();
-      buildBattle();
-    }, 5000);
+  setTimeout(function () {
+    pauseWinLoseSong(winSong)
+    pauseWinLoseSong(loseSong);
+    buildBattle();
+  }, 5000);
 }
