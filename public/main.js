@@ -22,8 +22,6 @@ var cpuHB = document.querySelector('.cpuBar');
 var hitButton = document.querySelector('.hit');
 var kickButton = document.querySelector('.kick');
 var buttonWrapper = document.querySelector('.button-wrapper');
-// var cpuSpecialBar = document.querySelector('#cpu-special-bar');
-// var playerSpecialBar = document.querySelector('#player-special-bar');
 
 var bannerElement = document.createElement('div');
 
@@ -282,13 +280,11 @@ function removeSpecialButton() {
 }
 
 function determineHealthPercent(current, constant, bar) {
-  // pass in health value, return health value as %
   var healthPercent = (current / constant) * 100;
   changeProgressBar(bar, healthPercent);
 }
 
 function changeProgressBar(bar, healthPercent) {
-  // pass in variable for either player or cpu, run through conditional to check % of health, change color of bar based on result
   bar.setAttribute("style", "width: " + healthPercent + "%");
   if (healthPercent <= 50 && healthPercent >= 25) {
     bar.className += " health-warning";
@@ -317,7 +313,6 @@ function battle() {
       cpuBattleH -= playerBattleD * 2;
       removeSpecialButton();
     }
-    // cpuHB.setAttribute('value', cpuBattleH);
     determineHealthPercent(cpuBattleH, cpuH100, cpuHB);
     playerImg.setAttribute('class', 'swing black-border-fifty');
     remSwing(playerImg);
@@ -351,7 +346,6 @@ function cpuAttackDelay() {
   setTimeout(function () {
     playRandomSnippet();
     cpuImg.setAttribute('class', 'r-swing black-border-fifty');
-    // playerHBar.setAttribute('value', playerBattleH);
     determineHealthPercent(playerBattleH, playerH100, playerHBar);
     remSwing(cpuImg);
   }, 500);
