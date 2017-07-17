@@ -14,23 +14,27 @@ var battleMain = document.querySelector('main');
 var playerDiv = document.querySelector('.player');
 var playerImgDiv = document.querySelector('.player-img');
 var playerInfoDiv = document.querySelector('.player-info');
-var playerHBar = document.querySelector('#player-health-bar');
+var playerHBar = document.querySelector('.playerBar');
 var cpuDiv = document.querySelector('.cpu');
 var cpuImgDiv = document.querySelector('.cpu-img');
 var cpuInfoDiv = document.querySelector('.cpu-info');
-var cpuHB = document.querySelector('#cpu-health-bar');
+var cpuHB = document.querySelector('.cpuBar');
 var hitButton = document.querySelector('.hit');
 var kickButton = document.querySelector('.kick');
 var buttonWrapper = document.querySelector('.button-wrapper');
+// var cpuSpecialBar = document.querySelector('#cpu-special-bar');
+// var playerSpecialBar = document.querySelector('#player-special-bar');
 
 var bannerElement = document.createElement('div');
 
 var randomChar;
 var randomCharImgPath;
 var playerBattleH;
+var playerH100;
 var playerBattleD;
 var playerBattleD2;
 var cpuBattleH;
+var cpuH100;
 var cpuBattleD;
 var cpuBattleD2;
 var playerImgPath;
@@ -209,10 +213,12 @@ function buildBattle() {
   bannerElement.remove();
   var cpuBattle = localStorage.cpuComplete.split(",");
   cpuBattleH = cpuBattle[1];
+  cpuH100 = cpuBattleH;
   cpuBattleD = cpuBattle[2];
   cpuBattleD2 = cpuBattle[3];
   var playerBattle = localStorage.playerComplete.split(",");
   playerBattleH = playerBattle[1];
+  playerH100 = playerBattleH;
   playerBattleD = playerBattle[2];
   playerBattleD2 = playerBattle[3];
 
@@ -225,10 +231,10 @@ function buildBattle() {
   cpuImg.setAttribute('src', cpuBattle[4]);
   cpuImg.setAttribute('class', 'black-border-fifty');
   cpuImgDiv.appendChild(cpuImg);
-  cpuHB.setAttribute('max', cpuBattleH);
-  playerHBar.setAttribute('max', playerBattleH);
-  cpuHB.setAttribute('value', cpuBattleH);
-  playerHBar.setAttribute('value', playerBattleH);
+  cpuHB.setAttribute('style', 'width: 100%');
+  cpuHB.setAttribute('class', 'progress-bar cpuBar');
+  playerHBar.setAttribute('style', 'width: 100%');
+  playerHBar.setAttribute('class', 'progress-bar playerBar');
 }
 
 //attack sound affects randomizer
@@ -275,6 +281,22 @@ function removeSpecialButton() {
   }
 }
 
+function determineHealthPercent(current, constant, bar) {
+  // pass in health value, return health value as %
+  var healthPercent = (current / constant) * 100;
+  changeProgressBar(bar, healthPercent);
+}
+
+function changeProgressBar(bar, healthPercent) {
+  // pass in variable for either player or cpu, run through conditional to check % of health, change color of bar based on result
+  bar.setAttribute("style", "width: " + healthPercent + "%");
+  if (healthPercent <= 50 && healthPercent >= 25) {
+    bar.className += " health-warning";
+  } else if (healthPercent <= 15){
+    bar.className += " health-danger";
+  }
+}
+
 function battle() {
 
   if (cpuBattleH > 0 && playerBattleH > 0) {
@@ -295,7 +317,8 @@ function battle() {
       cpuBattleH -= playerBattleD * 2;
       removeSpecialButton();
     }
-    cpuHB.setAttribute('value', cpuBattleH);
+    // cpuHB.setAttribute('value', cpuBattleH);
+    determineHealthPercent(cpuBattleH, cpuH100, cpuHB);
     playerImg.setAttribute('class', 'swing black-border-fifty');
     remSwing(playerImg);
     if (cpuBattleH <= 0) {
@@ -328,7 +351,8 @@ function cpuAttackDelay() {
   setTimeout(function () {
     playRandomSnippet();
     cpuImg.setAttribute('class', 'r-swing black-border-fifty');
-    playerHBar.setAttribute('value', playerBattleH);
+    // playerHBar.setAttribute('value', playerBattleH);
+    determineHealthPercent(playerBattleH, playerH100, playerHBar);
     remSwing(cpuImg);
   }, 500);
 }

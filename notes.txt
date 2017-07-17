@@ -1,8 +1,13 @@
--- add progress bar for special move juice??
-
--- add speical move for cpu******************DONE
+-- add speical move for cpu
+******************DONE
 
 -- change player progress bars to go red to green
+**********************
+set style to % of health
+set class to corresponding class based on %
+**********************DONE
+
+-- add progress bar for special move juice??
 
 -- add cycle of battles with random characters
 
@@ -11,4 +16,6 @@
 -- make responsive
 
 -- swing animation creates scroll bar for a few seconds on win/lose banner
+
+
 
