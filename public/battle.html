@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Marvel Battle</title>
-    <link rel="shortcut icon" href="./images/marvel.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body onload="buildBattle()" class="black">
-    <main class="battle-main">
-      <div class='wrapper'>
-        <div class="player-info"></div>
-        <div class="progress">
-          <div class="progress-bar playerBar">
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Marvel Battle</title>
+  <link rel="shortcut icon" href="./images/marvel.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body onload="buildBattle()" class="black">
+  <main class="battle-main">
+    <div class='wrapper'>
+      <div class="player-info"></div>
+      <div class="progress">
+        <div class="progress-bar playerBar">
         </div>
-      <!-- <progress id="player-health-bar" class="black-border"></progress> -->
-      <!-- <progress id="player-special-bar" class="black-border"></progress> -->
+      </div>
+      <div class="text-fire special-text"> Special Move </div>
+      <div class="progress">
+        <div class="progress-bar playerSpecialBar special-bar-color">
+        </div>
+      </div>
+
       <div class="player">
 
         <div class="player-img"></div>
@@ -24,26 +30,28 @@
     <div class="wrapper right-align">
       <div class="cpu-info"></div>
       <div class="progress cpuProg">
-          <div class="progress-bar cpuBar">
-          </div>
+        <div class="progress-bar cpuBar">
         </div>
-    <!-- <progress id="cpu-health-bar" class="black-border"></progress> -->
-    <!-- <progress id="cpu-special-bar" class="black-border"></progress> -->
-    <div class="cpu">
+      </div>
+      <div class="text-fire special-text"> Special Move</div>
+      <div class="progress cpuSpecialBar">
+        <div class="progress-bar cpu-special-bar special-bar-color">
+        </div>
+      </div>
+      <div class="cpu">
 
-      <div class="cpu-img"></div>
+        <div class="cpu-img"></div>
+      </div>
     </div>
-    </div>
-    </main>
-    <div class="button-wrapper">
-      <button class="kick">Hit</button>
-      <button class="hit">Kick</button>
-    </div>
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  </main>
+  <div class="button-wrapper">
+    <button class="kick">Hit</button>
+    <button class="hit">Kick</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="./md5.min.js"></script>
-    <script src="./main.js"></script>
-  </body>
+  <script src="./md5.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
 </html>

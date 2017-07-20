@@ -22,6 +22,8 @@ var cpuHB = document.querySelector('.cpuBar');
 var hitButton = document.querySelector('.hit');
 var kickButton = document.querySelector('.kick');
 var buttonWrapper = document.querySelector('.button-wrapper');
+var playerSpecialBar = document.querySelector('.playerSpecialBar');
+var cpuSpecialBar = document.querySelector('.cpu-special-bar');
 
 var bannerElement = document.createElement('div');
 
@@ -205,6 +207,8 @@ function pauseWinLoseSong(song) {
 //builds characters in battle stage
 function buildBattle() {
   cpuHitCounter = 0;
+  specialBar(playerSpecialBar, playerHitCounter);
+  specialBar(cpuSpecialBar, cpuHitCounter);
   removeSpecialButton();
   playStageSong();
   changeBackground();
@@ -263,7 +267,7 @@ function specialButtonCreator() {
   if (buttonWrapper.contains(specialButton)) {
     return
   } else {
-    specialButton.setAttribute('class', 'special');
+    specialButton.setAttribute('class', 'special glow');
     specialButton.textContent = "Special"
     specialButton.addEventListener('click', battle);
     buttonWrapper.appendChild(specialButton);
@@ -272,6 +276,7 @@ function specialButtonCreator() {
 
 function removeSpecialButton() {
   playerHitCounter = 0;
+  specialBar(playerSpecialBar, playerHitCounter);
   if (buttonWrapper.contains(specialButton)) {
     buttonWrapper.removeChild(specialButton);
   } else {
@@ -288,18 +293,34 @@ function changeProgressBar(bar, healthPercent) {
   bar.setAttribute("style", "width: " + healthPercent + "%");
   if (healthPercent <= 50 && healthPercent >= 25) {
     bar.className += " health-warning";
-  } else if (healthPercent <= 15){
+  } else if (healthPercent <= 15) {
     bar.className += " health-danger";
+  }
+}
+
+function specialBar(bar, count) {
+  if (count === 1) {
+    bar.setAttribute("style", "width: 33%");
+  } else if (count === 2) {
+    bar.setAttribute("style", "width: 66%");
+  } else if (count === 3) {
+    bar.setAttribute("style", "width: 100%");
+    bar.className += " glow";
+  } else if (count === 0) {
+    bar.setAttribute("style", "width: 0%");
+    bar.classList.remove("glow");
   }
 }
 
 function battle() {
 
   if (cpuBattleH > 0 && playerBattleH > 0) {
+
+    playerHitCounter += 1;
+    specialBar(playerSpecialBar, playerHitCounter);
     if (playerHitCounter > 0 && playerHitCounter % 3 === 0) {
       specialButtonCreator();
     }
-    playerHitCounter += 1;
     if (event.target.className === 'hit') {
       playRandomSnippet();
       cpuBattleH -= playerBattleD2;
@@ -308,7 +329,7 @@ function battle() {
       playRandomSnippet();
       cpuBattleH -= playerBattleD;
     }
-    else if (event.target.className === 'special') {
+    else if (event.target.className === 'special glow') {
       playRandomSnippet();
       cpuBattleH -= playerBattleD * 2;
       removeSpecialButton();
@@ -320,12 +341,14 @@ function battle() {
       return alertDelay(playerImg);
     }
     cpuAttackDelay();
-    cpuHitCounter += 1;
+
     if (cpuHitCounter > 0 && cpuHitCounter % 3 === 0) {
       playerBattleH -= cpuBattleD2 * 2;
       cpuHitCounter = 0;
     } else {
       playerBattleH -= cpuBattleD2;
+      cpuHitCounter += 1;
+
     }
     if (playerBattleH <= 0) {
       return alertDelay(cpuImg);
@@ -345,6 +368,7 @@ function remSwing(img) {
 function cpuAttackDelay() {
   setTimeout(function () {
     playRandomSnippet();
+    specialBar(cpuSpecialBar, cpuHitCounter);
     cpuImg.setAttribute('class', 'r-swing black-border-fifty');
     determineHealthPercent(playerBattleH, playerH100, playerHBar);
     remSwing(cpuImg);
