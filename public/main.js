@@ -74,11 +74,11 @@ function removeVideoPlaySong() {
   videoContainer.remove();
   loopSong();
 }
-
 function loopSong() {
   var backgroundSong = document.createElement('audio');
   backgroundSong.setAttribute('src', './audio/choose-character-song.mp3');
   backgroundSong.setAttribute('autoplay', 'autoplay');
+  main.appendChild(backgroundSong);
   backgroundSong.play();
   backgroundSong.loop = true;
 }
@@ -141,6 +141,21 @@ function newChar(results) {
   for (var j = 0; j < allButtons.length; j++) {
     allButtons[j].addEventListener("click", handleClick);
   }
+
+  // stops choose character song
+  var stopButton = document.getElementById('stopButton');
+  stopButton.addEventListener('click', stopMusic);
+
+  function stopMusic() {
+    var sounds = document.getElementsByTagName('audio');
+    if (stopButton.value === "Party Pooper Button") {
+      for (i = 0; i < sounds.length; i++) sounds[i].pause();
+      stopButton.value = "Start party";
+    } else {
+      sounds[0].play();
+      stopButton.value = "Party Pooper Button";
+    }
+  };
 }
 
 //function for click on character, sets stats for character
@@ -149,6 +164,7 @@ function handleClick(event) {
   localStorage.playerComplete = playerStatsComplete.toString();
   location.assign("./battle.html");
 }
+
 
 //functions for battle
 
@@ -187,12 +203,8 @@ function stageSongRet(idx) {
 }
 
 var stageSong;
+var stopButton2;
 
-function playStageSong() {
-  stageSong = stageSongRet()
-  stageSong.play()
-  stageSong.loop = true;
-}
 
 function pauseStageSong() {
   stageSong.pause()
@@ -204,13 +216,14 @@ function pauseWinLoseSong(song) {
   song.currentTime = 0;
 }
 
+
 //builds characters in battle stage
 function buildBattle() {
   cpuHitCounter = 0;
   specialBar(playerSpecialBar, playerHitCounter);
   specialBar(cpuSpecialBar, cpuHitCounter);
   removeSpecialButton();
-  playStageSong();
+  
   changeBackground();
   bannerElement.remove();
   var cpuBattle = localStorage.cpuComplete.split(",");
@@ -237,25 +250,55 @@ function buildBattle() {
   cpuHB.setAttribute('class', 'progress-bar cpuBar');
   playerHBar.setAttribute('style', 'width: 100%');
   playerHBar.setAttribute('class', 'progress-bar playerBar');
+
+  // adds event listener for stop stage song
+  stopButton2 = document.getElementById('stopButton2');
+  stopButton2.addEventListener('click', stopMusic2);
+
+
+
+  playStageSong();
+
 }
+
+  function playStageSong() {
+    if (stopButton2.value === "Party Pooper Button") {
+      stageSong = stageSongRet()
+      stageSong.play()
+      stageSong.loop = true;
+    }
+  }
+  // stops stage song
+  function stopMusic2() {
+    if (stopButton2.value === "Party Pooper Button") {
+      stageSong.volume = 0
+      stopButton2.value = "Start party";
+    } else {
+      stageSong.volume = 1;
+      stopButton2.value = "Party Pooper Button";
+    }
+  };
+
 
 //attack sound affects randomizer
 function playRandomSnippet() {
-  var snippets = [
-    './audio/attack1.wav',
-    './audio/attack2.wav',
-    './audio/attack3.wav',
-    './audio/attack4.wav',
-    './audio/attack5.wav',
-    './audio/attack6.wav',
-    './audio/attack7.wav',
-    './audio/attack8.wav',
-    './audio/attack9.wav',
-    './audio/attack10.wav'
-  ];
-  var snippet = snippets[Math.floor(Math.random() * 10)];
-  var clip = new Audio(snippet);
-  clip.play();
+  if (stopButton2.value === "Party Pooper Button") {
+    var snippets = [
+      './audio/attack1.wav',
+      './audio/attack2.wav',
+      './audio/attack3.wav',
+      './audio/attack4.wav',
+      './audio/attack5.wav',
+      './audio/attack6.wav',
+      './audio/attack7.wav',
+      './audio/attack8.wav',
+      './audio/attack9.wav',
+      './audio/attack10.wav'
+    ];
+    var snippet = snippets[Math.floor(Math.random() * 10)];
+    var clip = new Audio(snippet);
+    clip.play();
+  }
 }
 
 //the battle!
@@ -391,16 +434,20 @@ function alertDelay(winner) {
     if (winner === playerImg) {
       var cheer = new Audio('./audio/win.mp3');
       pauseStageSong();
-      cheer.play();
-      winSong.play();
+      if (stopButton2.value === "Party Pooper Button") {
+        cheer.play();
+        winSong.play();
+      }
       banner("YOU WIN!!!");
       winner.setAttribute('class', 'r-grow black-border-fifty');
       delayReset();
     } else {
       var gameOver = new Audio('./audio/game-over.wav');
       pauseStageSong();
-      gameOver.play();
-      loseSong.play();
+      if (stopButton2.value === "Party Pooper Button") {
+        gameOver.play();
+        loseSong.play();
+      }
       banner("YOU LOSE!!!");
       winner.setAttribute('class', 'grow black-border-fifty');
       delayReset();

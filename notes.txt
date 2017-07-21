@@ -7,7 +7,18 @@ set style to % of health
 set class to corresponding class based on %
 **********************DONE
 
+-- swing animation creates scroll bar for a few seconds on win/lose banner
+*****************FIXED
+
 -- add progress bar for special move juice??
+*****************DONE
+
+
+-- add mute button
+*****************DONE
+
+
+-- add special animation for special move??
 
 -- add cycle of battles with random characters
 
@@ -15,7 +26,7 @@ set class to corresponding class based on %
 
 -- make responsive
 
--- swing animation creates scroll bar for a few seconds on win/lose banner
+
 
 
 
