@@ -8,8 +8,11 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body onload="buildBattle()" class="black">
-   <input id="stopButton2" type="button" value="Party Pooper Button" /> 
+<body class="black">
+  <input id="stopButton2" type="button" value="Party Pooper Button" />
+  <div class="text-fire stage"> </div>
+  <div class="previous text-fire">
+  </div>
   <main class="battle-main">
     <div class='wrapper'>
       <div class="player-info"></div>
@@ -18,7 +21,7 @@
         </div>
       </div>
       <div class="text-fire special-text"> Special Move </div>
-      <div class="progress">
+      <div class="special-wrapper">
         <div class="progress-bar playerSpecialBar special-bar-color">
         </div>
       </div>
@@ -35,7 +38,7 @@
         </div>
       </div>
       <div class="text-fire special-text"> Special Move</div>
-      <div class="progress cpuSpecialBar">
+      <div class="special-wrapper cpuSpecialBar">
         <div class="progress-bar cpu-special-bar special-bar-color">
         </div>
       </div>
@@ -45,14 +48,21 @@
       </div>
     </div>
   </main>
+
   <div class="button-wrapper">
+    <div class="tally-win text-fire">Wins: </div>
+    <div class="tally-lose text-fire">Losses: </div>
     <button class="kick">Hit</button>
     <button class="hit">Kick</button>
+    <div class="next text-fire">
+    </div>
+    <div class="next-thumb">
+    </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-  <script src="./md5.min.js"></script>
-  <script src="./main.js"></script>
+  <script src="./bundle.js"></script>
 </body>
 
 </html>

@@ -13,14 +13,14 @@ set class to corresponding class based on %
 -- add progress bar for special move juice??
 *****************DONE
 
-
 -- add mute button
 *****************DONE
 
+add cycle of battles with random characters
+******************DONE
+
 
 -- add special animation for special move??
-
--- add cycle of battles with random characters
 
 -- separate main.js into modules
 
