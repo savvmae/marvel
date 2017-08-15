@@ -5,7 +5,7 @@ const webpackConfig = require('./webpack.config.js');
 
 application = express();
 
-application.set('port', process.env.PORT || 3000);
+application.set('port', process.env.PORT || 8000);
 
 const compiler = webpack(webpackConfig);
 application.use(express.static(__dirname + '/public'));

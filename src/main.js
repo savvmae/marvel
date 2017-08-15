@@ -73,9 +73,10 @@ function newChar(results) {
     //checks whether image_not_available
     if (results[i].thumbnail.path.indexOf(noImg) === -1) {
       var charImgPath = results[i].thumbnail.path + "/standard_fantastic." + results[i].thumbnail.extension;
-      var charHitValue = Math.floor(Math.random() * (5 - 1)) + 1;
-      var charKickValue = Math.floor(Math.random() * (5 - 1)) + 1;
-      var charHealthValue = Math.floor(Math.random() * (20 - 1)) + 1;
+      var charHitValue = Math.floor(Math.random() * (7 - 1)) + 3;
+      var charKickValue = Math.floor(Math.random() * (7 - 1)) + 3;
+      console.log(charHitValue);
+      var charHealthValue = Math.floor(Math.random() * (30 - 1)) + 15;
       var importantInfo = [results[i].name, charHealthValue, charHitValue, charKickValue, charImgPath];
       filteredResults.push(importantInfo);
     }
