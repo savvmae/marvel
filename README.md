@@ -1,4 +1,4 @@
-# Marel Masters
+# Marvel Masters
 
 Marvel Masters is an arcade-style video game. Using themes from Street Fighter and calling to Marvel's API, the user starts out by picking a character with randomly generated stats to take into battle. In the battle, the user goes through 5 stages, each of which leads them closer to victory. 
 
