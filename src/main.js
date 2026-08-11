@@ -8,6 +8,8 @@ var main = document.querySelector('.choose-char-main');
 var filteredResults = [];
 var videoContainer = document.querySelector('.video-container');
 var video = document.querySelector('video');
+var skipButton = document.querySelector('.skip-intro');
+var introDone = false;
 
 //powerstats come back 0-100, the battle screen expects the original ranges
 function scaleStat(value, min, max) {
@@ -62,9 +64,24 @@ function loadCharacters() {
 }
 
 const getCharacters = function () {
-  video.addEventListener('ended', removeVideoPlaySong);
+  startIntro();
   loadCharacters().then(newChar);
 };
+
+//browsers block autoplay with sound, so the intro is muted and every exit
+//route is wired up: it ended, it failed, or the visitor skipped it
+function startIntro() {
+  if (!video) return;
+
+  video.addEventListener('ended', removeVideoPlaySong);
+  video.addEventListener('error', removeVideoPlaySong);
+  if (skipButton) skipButton.addEventListener('click', removeVideoPlaySong);
+
+  var started = video.play();
+  if (started && typeof started.catch === 'function') {
+    started.catch(removeVideoPlaySong);
+  }
+}
 
 if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
   getCharacters();
@@ -73,21 +90,28 @@ if (window.location.pathname === '/battle.html') {
   battle();
 }
 
-//removes intro video
+//removes intro video, safe to call more than once
 function removeVideoPlaySong() {
-  video.remove();
-  videoContainer.remove();
+  if (introDone) return;
+  introDone = true;
+  if (video) video.remove();
+  if (videoContainer) videoContainer.remove();
   loopSong();
 }
 
 // creates background song and loops
 function loopSong() {
+  if (!main) return;
   var backgroundSong = document.createElement('audio');
   backgroundSong.setAttribute('src', './audio/choose-character-song.mp3');
   backgroundSong.setAttribute('autoplay', 'autoplay');
   main.appendChild(backgroundSong);
-  backgroundSong.play();
   backgroundSong.loop = true;
+  //blocked unless the visitor has interacted with the page, which is fine
+  var started = backgroundSong.play();
+  if (started && typeof started.catch === 'function') {
+    started.catch(function () {});
+  }
 }
 
 //creates random character **computer

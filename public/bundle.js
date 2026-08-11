@@ -348,6 +348,8 @@
   var filteredResults = [];
   var videoContainer = document.querySelector(".video-container");
   var video = document.querySelector("video");
+  var skipButton = document.querySelector(".skip-intro");
+  var introDone = false;
   function scaleStat(value, min, max) {
     return min + Math.round(value / 100 * (max - min));
   }
@@ -387,9 +389,19 @@
     });
   }
   var getCharacters = function() {
-    video.addEventListener("ended", removeVideoPlaySong);
+    startIntro();
     loadCharacters().then(newChar);
   };
+  function startIntro() {
+    if (!video) return;
+    video.addEventListener("ended", removeVideoPlaySong);
+    video.addEventListener("error", removeVideoPlaySong);
+    if (skipButton) skipButton.addEventListener("click", removeVideoPlaySong);
+    var started = video.play();
+    if (started && typeof started.catch === "function") {
+      started.catch(removeVideoPlaySong);
+    }
+  }
   if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
     getCharacters();
   }
@@ -397,17 +409,24 @@
     cpuChars();
   }
   function removeVideoPlaySong() {
-    video.remove();
-    videoContainer.remove();
+    if (introDone) return;
+    introDone = true;
+    if (video) video.remove();
+    if (videoContainer) videoContainer.remove();
     loopSong();
   }
   function loopSong() {
+    if (!main) return;
     var backgroundSong = document.createElement("audio");
     backgroundSong.setAttribute("src", "./audio/choose-character-song.mp3");
     backgroundSong.setAttribute("autoplay", "autoplay");
     main.appendChild(backgroundSong);
-    backgroundSong.play();
     backgroundSong.loop = true;
+    var started = backgroundSong.play();
+    if (started && typeof started.catch === "function") {
+      started.catch(function() {
+      });
+    }
   }
   function randomCharGenerator(results) {
     var cpuStats = [];

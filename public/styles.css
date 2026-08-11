@@ -549,3 +549,17 @@ battle page
   -o-background-size: cover;
   background-size: cover;
 }
+
+.skip-intro {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  padding: 8px 18px;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
