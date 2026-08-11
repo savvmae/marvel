@@ -1,0 +1,2423 @@
+[
+ {
+  "name": "A-Bomb",
+  "powerstats": {
+   "durability": 80,
+   "strength": 100,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+ },
+ {
+  "name": "Abomination",
+  "powerstats": {
+   "durability": 90,
+   "strength": 80,
+   "combat": 95
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/4-abomination.jpg"
+ },
+ {
+  "name": "Abraxas",
+  "powerstats": {
+   "durability": 100,
+   "strength": 63,
+   "combat": 55
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/5-abraxas.jpg"
+ },
+ {
+  "name": "Absorbing Man",
+  "powerstats": {
+   "durability": 100,
+   "strength": 80,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/6-absorbing-man.jpg"
+ },
+ {
+  "name": "Agent Bob",
+  "powerstats": {
+   "durability": 5,
+   "strength": 8,
+   "combat": 20
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/10-agent-bob.jpg"
+ },
+ {
+  "name": "Agent Zero",
+  "powerstats": {
+   "durability": 80,
+   "strength": 28,
+   "combat": 95
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/11-agent-zero.jpg"
+ },
+ {
+  "name": "Air-Walker",
+  "powerstats": {
+   "durability": 85,
+   "strength": 85,
+   "combat": 40
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/12-air-walker.jpg"
+ },
+ {
+  "name": "Ajax",
+  "powerstats": {
+   "durability": 80,
+   "strength": 48,
+   "combat": 55
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/13-ajax.jpg"
+ },
+ {
+  "name": "Angel Dust",
+  "powerstats": {
+   "durability": 42,
+   "strength": 55,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/25-angel-dust.jpg"
+ },
+ {
+  "name": "Annihilus",
+  "powerstats": {
+   "durability": 56,
+   "strength": 80,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/29-annihilus.jpg"
+ },
+ {
+  "name": "Ant-Man II",
+  "powerstats": {
+   "durability": 40,
+   "strength": 18,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/31-ant-man-ii.jpg"
+ },
+ {
+  "name": "Apocalypse",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/35-apocalypse.jpg"
+ },
+ {
+  "name": "Arachne",
+  "powerstats": {
+   "durability": 70,
+   "strength": 48,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/39-arachne.jpg"
+ },
+ {
+  "name": "Arclight",
+  "powerstats": {
+   "durability": 42,
+   "strength": 63,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/41-arclight.jpg"
+ },
+ {
+  "name": "Ardina",
+  "powerstats": {
+   "durability": 80,
+   "strength": 100,
+   "combat": 25
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/42-ardina.jpg"
+ },
+ {
+  "name": "Ares",
+  "powerstats": {
+   "durability": 80,
+   "strength": 82,
+   "combat": 101
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/43-ares.jpg"
+ },
+ {
+  "name": "Ariel",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/44-ariel.jpg"
+ },
+ {
+  "name": "Armor",
+  "powerstats": {
+   "durability": 80,
+   "strength": 63,
+   "combat": 54
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/45-armor.jpg"
+ },
+ {
+  "name": "Aurora",
+  "powerstats": {
+   "durability": 60,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/56-aurora.jpg"
+ },
+ {
+  "name": "Azazel",
+  "powerstats": {
+   "durability": 95,
+   "strength": 11,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/57-azazel.jpg"
+ },
+ {
+  "name": "Banshee",
+  "powerstats": {
+   "durability": 40,
+   "strength": 10,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/61-banshee.jpg"
+ },
+ {
+  "name": "Bantam",
+  "powerstats": {
+   "durability": 54,
+   "strength": 53,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/62-bantam.jpg"
+ },
+ {
+  "name": "Battlestar",
+  "powerstats": {
+   "durability": 74,
+   "strength": 53,
+   "combat": 74
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/72-battlestar.jpg"
+ },
+ {
+  "name": "Beast",
+  "powerstats": {
+   "durability": 60,
+   "strength": 48,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/75-beast.jpg"
+ },
+ {
+  "name": "Beta Ray Bill",
+  "powerstats": {
+   "durability": 95,
+   "strength": 80,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/79-beta-ray-bill.jpg"
+ },
+ {
+  "name": "Beyonder",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/80-beyonder.jpg"
+ },
+ {
+  "name": "Big Man",
+  "powerstats": {
+   "durability": 28,
+   "strength": 12,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/83-big-man.jpg"
+ },
+ {
+  "name": "Bird-Brain",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/88-bird-brain.jpg"
+ },
+ {
+  "name": "Bishop",
+  "powerstats": {
+   "durability": 75,
+   "strength": 14,
+   "combat": 65
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/92-bishop.jpg"
+ },
+ {
+  "name": "Black Bolt",
+  "powerstats": {
+   "durability": 84,
+   "strength": 67,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/96-black-bolt.jpg"
+ },
+ {
+  "name": "Black Cat",
+  "powerstats": {
+   "durability": 10,
+   "strength": 16,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/99-black-cat.jpg"
+ },
+ {
+  "name": "Black Knight III",
+  "powerstats": {
+   "durability": 70,
+   "strength": 10,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/102-black-knight-iii.jpg"
+ },
+ {
+  "name": "Black Mamba",
+  "powerstats": {
+   "durability": 42,
+   "strength": 10,
+   "combat": 65
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/104-black-mamba.jpg"
+ },
+ {
+  "name": "Black Panther",
+  "powerstats": {
+   "durability": 60,
+   "strength": 16,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/106-black-panther.jpg"
+ },
+ {
+  "name": "Black Widow",
+  "powerstats": {
+   "durability": 30,
+   "strength": 13,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/107-black-widow.jpg"
+ },
+ {
+  "name": "Blackout",
+  "powerstats": {
+   "durability": 80,
+   "strength": 32,
+   "combat": 65
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/109-blackout.jpg"
+ },
+ {
+  "name": "Blackwing",
+  "powerstats": {
+   "durability": 32,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/110-blackwing.jpg"
+ },
+ {
+  "name": "Blackwulf",
+  "powerstats": {
+   "durability": 30,
+   "strength": 28,
+   "combat": 25
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/111-blackwulf.jpg"
+ },
+ {
+  "name": "Blade",
+  "powerstats": {
+   "durability": 50,
+   "strength": 28,
+   "combat": 90
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/112-blade.jpg"
+ },
+ {
+  "name": "Bling!",
+  "powerstats": {
+   "durability": 90,
+   "strength": 14,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/114-bling!.jpg"
+ },
+ {
+  "name": "Blink",
+  "powerstats": {
+   "durability": 28,
+   "strength": 8,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/115-blink.jpg"
+ },
+ {
+  "name": "Blizzard II",
+  "powerstats": {
+   "durability": 42,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/118-blizzard-ii.jpg"
+ },
+ {
+  "name": "Blob",
+  "powerstats": {
+   "durability": 95,
+   "strength": 83,
+   "combat": 72
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/119-blob.jpg"
+ },
+ {
+  "name": "Bloodaxe",
+  "powerstats": {
+   "durability": 80,
+   "strength": 80,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/120-bloodaxe.jpg"
+ },
+ {
+  "name": "Bloodhawk",
+  "powerstats": {
+   "durability": 80,
+   "strength": 10,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/121-bloodhawk.jpg"
+ },
+ {
+  "name": "Bullseye",
+  "powerstats": {
+   "durability": 70,
+   "strength": 11,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/141-bullseye.jpg"
+ },
+ {
+  "name": "Cable",
+  "powerstats": {
+   "durability": 56,
+   "strength": 48,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/145-cable.jpg"
+ },
+ {
+  "name": "Callisto",
+  "powerstats": {
+   "durability": 42,
+   "strength": 53,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/146-callisto.jpg"
+ },
+ {
+  "name": "Cannonball",
+  "powerstats": {
+   "durability": 99,
+   "strength": 28,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/148-cannonball.jpg"
+ },
+ {
+  "name": "Captain America",
+  "powerstats": {
+   "durability": 55,
+   "strength": 19,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/149-captain-america.jpg"
+ },
+ {
+  "name": "Captain Britain",
+  "powerstats": {
+   "durability": 60,
+   "strength": 77,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/151-captain-britain.jpg"
+ },
+ {
+  "name": "Captain Planet",
+  "powerstats": {
+   "durability": 80,
+   "strength": 88,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/160-captain-planet.jpg"
+ },
+ {
+  "name": "Carnage",
+  "powerstats": {
+   "durability": 84,
+   "strength": 63,
+   "combat": 90
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/162-carnage.jpg"
+ },
+ {
+  "name": "Century",
+  "powerstats": {
+   "durability": 64,
+   "strength": 80,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/167-century.jpg"
+ },
+ {
+  "name": "Chamber",
+  "powerstats": {
+   "durability": 80,
+   "strength": 10,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/169-chamber.jpg"
+ },
+ {
+  "name": "Changeling",
+  "powerstats": {
+   "durability": 42,
+   "strength": 10,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/171-changeling.jpg"
+ },
+ {
+  "name": "Cloak",
+  "powerstats": {
+   "durability": 64,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/180-cloak.jpg"
+ },
+ {
+  "name": "Colossus",
+  "powerstats": {
+   "durability": 100,
+   "strength": 83,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/185-colossus.jpg"
+ },
+ {
+  "name": "Copycat",
+  "powerstats": {
+   "durability": 25,
+   "strength": 10,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/186-copycat.jpg"
+ },
+ {
+  "name": "Cottonmouth",
+  "powerstats": {
+   "durability": 10,
+   "strength": 10,
+   "combat": 25
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/188-cottonmouth.jpg"
+ },
+ {
+  "name": "Crystal",
+  "powerstats": {
+   "durability": 14,
+   "strength": 16,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/191-crystal.jpg"
+ },
+ {
+  "name": "Cyclops",
+  "powerstats": {
+   "durability": 42,
+   "strength": 10,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/196-cyclops.jpg"
+ },
+ {
+  "name": "Dagger",
+  "powerstats": {
+   "durability": 42,
+   "strength": 10,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/198-dagger.jpg"
+ },
+ {
+  "name": "Daredevil",
+  "powerstats": {
+   "durability": 35,
+   "strength": 13,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/201-daredevil.jpg"
+ },
+ {
+  "name": "Darkhawk",
+  "powerstats": {
+   "durability": 70,
+   "strength": 32,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/202-darkhawk.jpg"
+ },
+ {
+  "name": "Darkstar",
+  "powerstats": {
+   "durability": 42,
+   "strength": 8,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/206-darkstar.jpg"
+ },
+ {
+  "name": "Dazzler",
+  "powerstats": {
+   "durability": 60,
+   "strength": 10,
+   "combat": 55
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/211-dazzler.jpg"
+ },
+ {
+  "name": "Deathlok",
+  "powerstats": {
+   "durability": 70,
+   "strength": 32,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/215-deathlok.jpg"
+ },
+ {
+  "name": "Demogoblin",
+  "powerstats": {
+   "durability": 35,
+   "strength": 48,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/217-demogoblin.jpg"
+ },
+ {
+  "name": "Destroyer",
+  "powerstats": {
+   "durability": 98,
+   "strength": 95,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/218-destroyer.jpg"
+ },
+ {
+  "name": "Diamondback",
+  "powerstats": {
+   "durability": 28,
+   "strength": 16,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/219-diamondback.jpg"
+ },
+ {
+  "name": "Doc Samson",
+  "powerstats": {
+   "durability": 80,
+   "strength": 80,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/221-doc-samson.jpg"
+ },
+ {
+  "name": "Doctor Doom",
+  "powerstats": {
+   "durability": 100,
+   "strength": 32,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/222-doctor-doom.jpg"
+ },
+ {
+  "name": "Doctor Octopus",
+  "powerstats": {
+   "durability": 40,
+   "strength": 48,
+   "combat": 65
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/225-doctor-octopus.jpg"
+ },
+ {
+  "name": "Doctor Strange",
+  "powerstats": {
+   "durability": 84,
+   "strength": 10,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/226-doctor-strange.jpg"
+ },
+ {
+  "name": "Domino",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 74
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/227-domino.jpg"
+ },
+ {
+  "name": "Doppelganger",
+  "powerstats": {
+   "durability": 95,
+   "strength": 63,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/231-doppelganger.jpg"
+ },
+ {
+  "name": "Dormammu",
+  "powerstats": {
+   "durability": 100,
+   "strength": 95,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/232-dormammu.jpg"
+ },
+ {
+  "name": "Drax the Destroyer",
+  "powerstats": {
+   "durability": 85,
+   "strength": 80,
+   "combat": 65
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/234-drax-the-destroyer.jpg"
+ },
+ {
+  "name": "Ego",
+  "powerstats": {
+   "durability": 99,
+   "strength": 80,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/235-ego.jpg"
+ },
+ {
+  "name": "Electro",
+  "powerstats": {
+   "durability": 56,
+   "strength": 10,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/237-electro.jpg"
+ },
+ {
+  "name": "Elektra",
+  "powerstats": {
+   "durability": 28,
+   "strength": 11,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/238-elektra.jpg"
+ },
+ {
+  "name": "Emma Frost",
+  "powerstats": {
+   "durability": 90,
+   "strength": 63,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/241-emma-frost.jpg"
+ },
+ {
+  "name": "Evilhawk",
+  "powerstats": {
+   "durability": 70,
+   "strength": 32,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/248-evilhawk.jpg"
+ },
+ {
+  "name": "Exodus",
+  "powerstats": {
+   "durability": 28,
+   "strength": 81,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/249-exodus.jpg"
+ },
+ {
+  "name": "Falcon",
+  "powerstats": {
+   "durability": 28,
+   "strength": 13,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/251-falcon.jpg"
+ },
+ {
+  "name": "Fallen One II",
+  "powerstats": {
+   "durability": 100,
+   "strength": 85,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/252-fallen-one-ii.jpg"
+ },
+ {
+  "name": "Feral",
+  "powerstats": {
+   "durability": 28,
+   "strength": 28,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/254-feral.jpg"
+ },
+ {
+  "name": "Fin Fang Foom",
+  "powerstats": {
+   "durability": 100,
+   "strength": 81,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/256-fin-fang-foom.jpg"
+ },
+ {
+  "name": "Firebird",
+  "powerstats": {
+   "durability": 14,
+   "strength": 8,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/257-firebird.jpg"
+ },
+ {
+  "name": "Firelord",
+  "powerstats": {
+   "durability": 90,
+   "strength": 63,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/258-firelord.jpg"
+ },
+ {
+  "name": "Firestar",
+  "powerstats": {
+   "durability": 55,
+   "strength": 8,
+   "combat": 32
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/259-firestar.jpg"
+ },
+ {
+  "name": "Forge",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 48
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/268-forge.jpg"
+ },
+ {
+  "name": "Franklin Richards",
+  "powerstats": {
+   "durability": 60,
+   "strength": 80,
+   "combat": 50
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/269-franklin-richards.jpg"
+ },
+ {
+  "name": "Franklin Storm",
+  "powerstats": {
+   "durability": 1,
+   "strength": 10,
+   "combat": 10
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/270-franklin-storm.jpg"
+ },
+ {
+  "name": "Frenzy",
+  "powerstats": {
+   "durability": 100,
+   "strength": 53,
+   "combat": 52
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/271-frenzy.jpg"
+ },
+ {
+  "name": "Galactus",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 50
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/273-galactus.jpg"
+ },
+ {
+  "name": "Gambit",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/274-gambit.jpg"
+ },
+ {
+  "name": "Gamora",
+  "powerstats": {
+   "durability": 85,
+   "strength": 85,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/275-gamora.jpg"
+ },
+ {
+  "name": "Ghost Rider",
+  "powerstats": {
+   "durability": 100,
+   "strength": 55,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/280-ghost-rider.jpg"
+ },
+ {
+  "name": "Gladiator",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/285-gladiator.jpg"
+ },
+ {
+  "name": "Goblin Queen",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/286-goblin-queen.jpg"
+ },
+ {
+  "name": "Gravity",
+  "powerstats": {
+   "durability": 40,
+   "strength": 32,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/296-gravity.jpg"
+ },
+ {
+  "name": "Green Goblin",
+  "powerstats": {
+   "durability": 60,
+   "strength": 48,
+   "combat": 50
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/299-green-goblin.jpg"
+ },
+ {
+  "name": "Green Goblin II",
+  "powerstats": {
+   "durability": 50,
+   "strength": 55,
+   "combat": 26
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/300-green-goblin-ii.jpg"
+ },
+ {
+  "name": "Groot",
+  "powerstats": {
+   "durability": 70,
+   "strength": 85,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/303-groot.jpg"
+ },
+ {
+  "name": "Havok",
+  "powerstats": {
+   "durability": 60,
+   "strength": 10,
+   "combat": 45
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/311-havok.jpg"
+ },
+ {
+  "name": "Hawkeye II",
+  "powerstats": {
+   "durability": 10,
+   "strength": 6,
+   "combat": 50
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/314-hawkeye-ii.jpg"
+ },
+ {
+  "name": "Hela",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 45
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/321-hela.jpg"
+ },
+ {
+  "name": "Hellcat",
+  "powerstats": {
+   "durability": 45,
+   "strength": 11,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/323-hellcat.jpg"
+ },
+ {
+  "name": "Hercules",
+  "powerstats": {
+   "durability": 85,
+   "strength": 100,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/325-hercules.jpg"
+ },
+ {
+  "name": "Hope Summers",
+  "powerstats": {
+   "durability": 32,
+   "strength": 10,
+   "combat": 75
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/330-hope-summers.jpg"
+ },
+ {
+  "name": "Hulk",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/332-hulk.jpg"
+ },
+ {
+  "name": "Human Torch",
+  "powerstats": {
+   "durability": 70,
+   "strength": 11,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/333-human-torch.jpg"
+ },
+ {
+  "name": "Husk",
+  "powerstats": {
+   "durability": 78,
+   "strength": 63,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/335-husk.jpg"
+ },
+ {
+  "name": "Hybrid",
+  "powerstats": {
+   "durability": 75,
+   "strength": 63,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/336-hybrid.jpg"
+ },
+ {
+  "name": "Hydro-Man",
+  "powerstats": {
+   "durability": 80,
+   "strength": 13,
+   "combat": 50
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/337-hydro-man.jpg"
+ },
+ {
+  "name": "Hyperion",
+  "powerstats": {
+   "durability": 95,
+   "strength": 100,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/338-hyperion.jpg"
+ },
+ {
+  "name": "Iceman",
+  "powerstats": {
+   "durability": 100,
+   "strength": 32,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/339-iceman.jpg"
+ },
+ {
+  "name": "Ink",
+  "powerstats": {
+   "durability": 40,
+   "strength": 28,
+   "combat": 50
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/343-ink.jpg"
+ },
+ {
+  "name": "Invisible Woman",
+  "powerstats": {
+   "durability": 85,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/344-invisible-woman.jpg"
+ },
+ {
+  "name": "Iron Fist",
+  "powerstats": {
+   "durability": 50,
+   "strength": 55,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/345-iron-fist.jpg"
+ },
+ {
+  "name": "Iron Man",
+  "powerstats": {
+   "durability": 85,
+   "strength": 85,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/346-iron-man.jpg"
+ },
+ {
+  "name": "Iron Monger",
+  "powerstats": {
+   "durability": 90,
+   "strength": 63,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/347-iron-monger.jpg"
+ },
+ {
+  "name": "Jack of Hearts",
+  "powerstats": {
+   "durability": 30,
+   "strength": 55,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/350-jack-of-hearts.jpg"
+ },
+ {
+  "name": "Jennifer Kale",
+  "powerstats": {
+   "durability": 42,
+   "strength": 10,
+   "combat": 72
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/358-jennifer-kale.jpg"
+ },
+ {
+  "name": "John Wraith",
+  "powerstats": {
+   "durability": 28,
+   "strength": 12,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/no-portrait.jpg"
+ },
+ {
+  "name": "Jolt",
+  "powerstats": {
+   "durability": 32,
+   "strength": 12,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/371-jolt.jpg"
+ },
+ {
+  "name": "Jubilee",
+  "powerstats": {
+   "durability": 20,
+   "strength": 8,
+   "combat": 90
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/372-jubilee.jpg"
+ },
+ {
+  "name": "Juggernaut",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/374-juggernaut.jpg"
+ },
+ {
+  "name": "Junkpile",
+  "powerstats": {
+   "durability": 90,
+   "strength": 38,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/375-junkpile.jpg"
+ },
+ {
+  "name": "Justice",
+  "powerstats": {
+   "durability": 70,
+   "strength": 10,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/376-justice.jpg"
+ },
+ {
+  "name": "Kingpin",
+  "powerstats": {
+   "durability": 40,
+   "strength": 18,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/391-kingpin.jpg"
+ },
+ {
+  "name": "Klaw",
+  "powerstats": {
+   "durability": 100,
+   "strength": 38,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/392-klaw.jpg"
+ },
+ {
+  "name": "Kraven II",
+  "powerstats": {
+   "durability": 28,
+   "strength": 34,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/394-kraven-ii.jpg"
+ },
+ {
+  "name": "Kraven the Hunter",
+  "powerstats": {
+   "durability": 42,
+   "strength": 32,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/395-kraven-the-hunter.jpg"
+ },
+ {
+  "name": "Lady Deathstrike",
+  "powerstats": {
+   "durability": 85,
+   "strength": 28,
+   "combat": 90
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/400-lady-deathstrike.jpg"
+ },
+ {
+  "name": "Leader",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/401-leader.jpg"
+ },
+ {
+  "name": "Leech",
+  "powerstats": {
+   "durability": 14,
+   "strength": 5,
+   "combat": 14
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/402-leech.jpg"
+ },
+ {
+  "name": "Legion",
+  "powerstats": {
+   "durability": 30,
+   "strength": 100,
+   "combat": 75
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/403-legion.jpg"
+ },
+ {
+  "name": "Living Brain",
+  "powerstats": {
+   "durability": 56,
+   "strength": 53,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/409-living-brain.jpg"
+ },
+ {
+  "name": "Living Tribunal",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/410-living-tribunal.jpg"
+ },
+ {
+  "name": "Lizard",
+  "powerstats": {
+   "durability": 70,
+   "strength": 51,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/412-lizard.jpg"
+ },
+ {
+  "name": "Loki",
+  "powerstats": {
+   "durability": 85,
+   "strength": 63,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/414-loki.jpg"
+ },
+ {
+  "name": "Longshot",
+  "powerstats": {
+   "durability": 10,
+   "strength": 10,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/415-longshot.jpg"
+ },
+ {
+  "name": "Luna",
+  "powerstats": {
+   "durability": 14,
+   "strength": 6,
+   "combat": 14
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/419-luna.jpg"
+ },
+ {
+  "name": "MODOK",
+  "powerstats": {
+   "durability": 25,
+   "strength": 18,
+   "combat": 15
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/463-modok.jpg"
+ },
+ {
+  "name": "Mach-IV",
+  "powerstats": {
+   "durability": 84,
+   "strength": 36,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/421-mach-iv.jpg"
+ },
+ {
+  "name": "Machine Man",
+  "powerstats": {
+   "durability": 84,
+   "strength": 32,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/422-machine-man.jpg"
+ },
+ {
+  "name": "Magneto",
+  "powerstats": {
+   "durability": 84,
+   "strength": 80,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/423-magneto.jpg"
+ },
+ {
+  "name": "Magus",
+  "powerstats": {
+   "durability": 99,
+   "strength": 100,
+   "combat": 74
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/425-magus.jpg"
+ },
+ {
+  "name": "Man-Thing",
+  "powerstats": {
+   "durability": 100,
+   "strength": 32,
+   "combat": 40
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/428-man-thing.jpg"
+ },
+ {
+  "name": "Man-Wolf",
+  "powerstats": {
+   "durability": 42,
+   "strength": 44,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/429-man-wolf.jpg"
+ },
+ {
+  "name": "Mandarin",
+  "powerstats": {
+   "durability": 28,
+   "strength": 28,
+   "combat": 95
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/430-mandarin.jpg"
+ },
+ {
+  "name": "Mantis",
+  "powerstats": {
+   "durability": 80,
+   "strength": 8,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/431-mantis.jpg"
+ },
+ {
+  "name": "Marvel Girl",
+  "powerstats": {
+   "durability": 42,
+   "strength": 85,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/433-marvel-girl.jpg"
+ },
+ {
+  "name": "Maverick",
+  "powerstats": {
+   "durability": 42,
+   "strength": 10,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/438-maverick.jpg"
+ },
+ {
+  "name": "Medusa",
+  "powerstats": {
+   "durability": 70,
+   "strength": 34,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/441-medusa.jpg"
+ },
+ {
+  "name": "Mephisto",
+  "powerstats": {
+   "durability": 95,
+   "strength": 85,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/443-mephisto.jpg"
+ },
+ {
+  "name": "Mimic",
+  "powerstats": {
+   "durability": 56,
+   "strength": 67,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/452-mimic.jpg"
+ },
+ {
+  "name": "Mister Fantastic",
+  "powerstats": {
+   "durability": 70,
+   "strength": 10,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/456-mister-fantastic.jpg"
+ },
+ {
+  "name": "Mister Knife",
+  "powerstats": {
+   "durability": 30,
+   "strength": 10,
+   "combat": 65
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/458-mister-knife.jpg"
+ },
+ {
+  "name": "Mister Sinister",
+  "powerstats": {
+   "durability": 90,
+   "strength": 48,
+   "combat": 50
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/460-mister-sinister.jpg"
+ },
+ {
+  "name": "Mockingbird",
+  "powerstats": {
+   "durability": 20,
+   "strength": 31,
+   "combat": 95
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/462-mockingbird.jpg"
+ },
+ {
+  "name": "Molten Man",
+  "powerstats": {
+   "durability": 84,
+   "strength": 73,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/467-molten-man.jpg"
+ },
+ {
+  "name": "Moon Knight",
+  "powerstats": {
+   "durability": 42,
+   "strength": 36,
+   "combat": 75
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/470-moon-knight.jpg"
+ },
+ {
+  "name": "Moonstone",
+  "powerstats": {
+   "durability": 52,
+   "strength": 67,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/471-moonstone.jpg"
+ },
+ {
+  "name": "Morlun",
+  "powerstats": {
+   "durability": 42,
+   "strength": 60,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/472-morlun.jpg"
+ },
+ {
+  "name": "Moses Magnum",
+  "powerstats": {
+   "durability": 42,
+   "strength": 28,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/474-moses-magnum.jpg"
+ },
+ {
+  "name": "Mr Immortal",
+  "powerstats": {
+   "durability": 100,
+   "strength": 10,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/no-portrait.jpg"
+ },
+ {
+  "name": "Multiple Man",
+  "powerstats": {
+   "durability": 70,
+   "strength": 11,
+   "combat": 62
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/478-multiple-man.jpg"
+ },
+ {
+  "name": "Mysterio",
+  "powerstats": {
+   "durability": 40,
+   "strength": 10,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/479-mysterio.jpg"
+ },
+ {
+  "name": "Mystique",
+  "powerstats": {
+   "durability": 64,
+   "strength": 12,
+   "combat": 74
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/480-mystique.jpg"
+ },
+ {
+  "name": "Namor",
+  "powerstats": {
+   "durability": 70,
+   "strength": 95,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/481-namor.jpg"
+ },
+ {
+  "name": "Namora",
+  "powerstats": {
+   "durability": 42,
+   "strength": 85,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/483-namora.jpg"
+ },
+ {
+  "name": "Namorita",
+  "powerstats": {
+   "durability": 70,
+   "strength": 72,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/484-namorita.jpg"
+ },
+ {
+  "name": "Nebula",
+  "powerstats": {
+   "durability": 50,
+   "strength": 52,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/487-nebula.jpg"
+ },
+ {
+  "name": "Negasonic Teenage Warhead",
+  "powerstats": {
+   "durability": 10,
+   "strength": 7,
+   "combat": 35
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/488-negasonic-teenage-warhead.jpg"
+ },
+ {
+  "name": "Nick Fury",
+  "powerstats": {
+   "durability": 42,
+   "strength": 11,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/489-nick-fury.jpg"
+ },
+ {
+  "name": "Nightcrawler",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/490-nightcrawler.jpg"
+ },
+ {
+  "name": "Northstar",
+  "powerstats": {
+   "durability": 56,
+   "strength": 18,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/495-northstar.jpg"
+ },
+ {
+  "name": "Nova",
+  "powerstats": {
+   "durability": 100,
+   "strength": 85,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/496-nova.jpg"
+ },
+ {
+  "name": "Nova",
+  "powerstats": {
+   "durability": 100,
+   "strength": 60,
+   "combat": 35
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/497-nova.jpg"
+ },
+ {
+  "name": "Odin",
+  "powerstats": {
+   "durability": 95,
+   "strength": 83,
+   "combat": 90
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/498-odin.jpg"
+ },
+ {
+  "name": "One-Above-All",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/503-one-above-all.jpg"
+ },
+ {
+  "name": "Onslaught",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 55
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/504-onslaught.jpg"
+ },
+ {
+  "name": "Plantman",
+  "powerstats": {
+   "durability": 55,
+   "strength": 60,
+   "combat": 25
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/518-plantman.jpg"
+ },
+ {
+  "name": "Polaris",
+  "powerstats": {
+   "durability": 50,
+   "strength": 73,
+   "combat": 45
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/523-polaris.jpg"
+ },
+ {
+  "name": "Professor X",
+  "powerstats": {
+   "durability": 14,
+   "strength": 8,
+   "combat": 32
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/527-professor-x.jpg"
+ },
+ {
+  "name": "Psylocke",
+  "powerstats": {
+   "durability": 40,
+   "strength": 33,
+   "combat": 90
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/529-psylocke.jpg"
+ },
+ {
+  "name": "Punisher",
+  "powerstats": {
+   "durability": 45,
+   "strength": 16,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/530-punisher.jpg"
+ },
+ {
+  "name": "Purple Man",
+  "powerstats": {
+   "durability": 30,
+   "strength": 10,
+   "combat": 10
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/531-purple-man.jpg"
+ },
+ {
+  "name": "Pyro",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/532-pyro.jpg"
+ },
+ {
+  "name": "Quicksilver",
+  "powerstats": {
+   "durability": 60,
+   "strength": 28,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/536-quicksilver.jpg"
+ },
+ {
+  "name": "Quill",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 14
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/537-quill.jpg"
+ },
+ {
+  "name": "Red Hulk",
+  "powerstats": {
+   "durability": 85,
+   "strength": 100,
+   "combat": 75
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/547-red-hulk.jpg"
+ },
+ {
+  "name": "Red Skull",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/550-red-skull.jpg"
+ },
+ {
+  "name": "Rhino",
+  "powerstats": {
+   "durability": 90,
+   "strength": 80,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/556-rhino.jpg"
+ },
+ {
+  "name": "Rocket Raccoon",
+  "powerstats": {
+   "durability": 28,
+   "strength": 5,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/566-rocket-raccoon.jpg"
+ },
+ {
+  "name": "Rogue",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/567-rogue.jpg"
+ },
+ {
+  "name": "Sabretooth",
+  "powerstats": {
+   "durability": 90,
+   "strength": 48,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/570-sabretooth.jpg"
+ },
+ {
+  "name": "Sage",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/571-sage.jpg"
+ },
+ {
+  "name": "Sandman",
+  "powerstats": {
+   "durability": 90,
+   "strength": 75,
+   "combat": 60
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/572-sandman.jpg"
+ },
+ {
+  "name": "Sasquatch",
+  "powerstats": {
+   "durability": 56,
+   "strength": 80,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/573-sasquatch.jpg"
+ },
+ {
+  "name": "Scarlet Spider II",
+  "powerstats": {
+   "durability": 40,
+   "strength": 55,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/578-scarlet-spider-ii.jpg"
+ },
+ {
+  "name": "Scarlet Witch",
+  "powerstats": {
+   "durability": 70,
+   "strength": 10,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/579-scarlet-witch.jpg"
+ },
+ {
+  "name": "Scorpia",
+  "powerstats": {
+   "durability": 28,
+   "strength": 28,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/580-scorpia.jpg"
+ },
+ {
+  "name": "Sebastian Shaw",
+  "powerstats": {
+   "durability": 95,
+   "strength": 85,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/no-portrait.jpg"
+ },
+ {
+  "name": "Sentry",
+  "powerstats": {
+   "durability": 84,
+   "strength": 100,
+   "combat": 40
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/583-sentry.jpg"
+ },
+ {
+  "name": "Shadow King",
+  "powerstats": {
+   "durability": 100,
+   "strength": 12,
+   "combat": 75
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/584-shadow-king.jpg"
+ },
+ {
+  "name": "Shadowcat",
+  "powerstats": {
+   "durability": 25,
+   "strength": 8,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/586-shadowcat.jpg"
+ },
+ {
+  "name": "Shang-Chi",
+  "powerstats": {
+   "durability": 50,
+   "strength": 12,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/587-shang-chi.jpg"
+ },
+ {
+  "name": "Shatterstar",
+  "powerstats": {
+   "durability": 64,
+   "strength": 48,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/588-shatterstar.jpg"
+ },
+ {
+  "name": "She-Hulk",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/589-she-hulk.jpg"
+ },
+ {
+  "name": "Shocker",
+  "powerstats": {
+   "durability": 70,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/591-shocker.jpg"
+ },
+ {
+  "name": "Shriek",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/592-shriek.jpg"
+ },
+ {
+  "name": "Sif",
+  "powerstats": {
+   "durability": 80,
+   "strength": 90,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/594-sif.jpg"
+ },
+ {
+  "name": "Silk",
+  "powerstats": {
+   "durability": 70,
+   "strength": 48,
+   "combat": 65
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/595-silk.jpg"
+ },
+ {
+  "name": "Silver Surfer",
+  "powerstats": {
+   "durability": 90,
+   "strength": 100,
+   "combat": 32
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/598-silver-surfer.jpg"
+ },
+ {
+  "name": "Silverclaw",
+  "powerstats": {
+   "durability": 42,
+   "strength": 28,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/599-silverclaw.jpg"
+ },
+ {
+  "name": "Siryn",
+  "powerstats": {
+   "durability": 28,
+   "strength": 8,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/604-siryn.jpg"
+ },
+ {
+  "name": "Skaar",
+  "powerstats": {
+   "durability": 90,
+   "strength": 85,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/605-skaar.jpg"
+ },
+ {
+  "name": "Snowbird",
+  "powerstats": {
+   "durability": 42,
+   "strength": 32,
+   "combat": 52
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/607-snowbird.jpg"
+ },
+ {
+  "name": "Songbird",
+  "powerstats": {
+   "durability": 42,
+   "strength": 36,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/610-songbird.jpg"
+ },
+ {
+  "name": "Spider-Girl",
+  "powerstats": {
+   "durability": 65,
+   "strength": 38,
+   "combat": 75
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/618-spider-girl.jpg"
+ },
+ {
+  "name": "Spider-Gwen",
+  "powerstats": {
+   "durability": 70,
+   "strength": 55,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/619-spider-gwen.jpg"
+ },
+ {
+  "name": "Spider-Man",
+  "powerstats": {
+   "durability": 75,
+   "strength": 55,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/620-spider-man.jpg"
+ },
+ {
+  "name": "Spider-Woman",
+  "powerstats": {
+   "durability": 60,
+   "strength": 42,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/623-spider-woman.jpg"
+ },
+ {
+  "name": "Spider-Woman III",
+  "powerstats": {
+   "durability": 42,
+   "strength": 48,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/625-spider-woman-iii.jpg"
+ },
+ {
+  "name": "Spyke",
+  "powerstats": {
+   "durability": 60,
+   "strength": 12,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/628-spyke.jpg"
+ },
+ {
+  "name": "Star-Lord",
+  "powerstats": {
+   "durability": 50,
+   "strength": 20,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/630-star-lord.jpg"
+ },
+ {
+  "name": "Stardust",
+  "powerstats": {
+   "durability": 110,
+   "strength": 85,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/631-stardust.jpg"
+ },
+ {
+  "name": "Storm",
+  "powerstats": {
+   "durability": 30,
+   "strength": 10,
+   "combat": 75
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/638-storm.jpg"
+ },
+ {
+  "name": "Sunspot",
+  "powerstats": {
+   "durability": 25,
+   "strength": 63,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/640-sunspot.jpg"
+ },
+ {
+  "name": "Swarm",
+  "powerstats": {
+   "durability": 90,
+   "strength": 18,
+   "combat": 35
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/646-swarm.jpg"
+ },
+ {
+  "name": "Synch",
+  "powerstats": {
+   "durability": 28,
+   "strength": 67,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/648-synch.jpg"
+ },
+ {
+  "name": "Taskmaster",
+  "powerstats": {
+   "durability": 20,
+   "strength": 12,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/653-taskmaster.jpg"
+ },
+ {
+  "name": "Thanos",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/655-thanos.jpg"
+ },
+ {
+  "name": "Thing",
+  "powerstats": {
+   "durability": 100,
+   "strength": 84,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/658-thing.jpg"
+ },
+ {
+  "name": "Thor Girl",
+  "powerstats": {
+   "durability": 84,
+   "strength": 83,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/660-thor-girl.jpg"
+ },
+ {
+  "name": "Thunderbird",
+  "powerstats": {
+   "durability": 32,
+   "strength": 32,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/661-thunderbird.jpg"
+ },
+ {
+  "name": "Thunderstrike",
+  "powerstats": {
+   "durability": 84,
+   "strength": 80,
+   "combat": 72
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/664-thunderstrike.jpg"
+ },
+ {
+  "name": "Thundra",
+  "powerstats": {
+   "durability": 64,
+   "strength": 81,
+   "combat": 54
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/665-thundra.jpg"
+ },
+ {
+  "name": "Tiger Shark",
+  "powerstats": {
+   "durability": 70,
+   "strength": 72,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/666-tiger-shark.jpg"
+ },
+ {
+  "name": "Tigra",
+  "powerstats": {
+   "durability": 38,
+   "strength": 32,
+   "combat": 90
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/667-tigra.jpg"
+ },
+ {
+  "name": "Tinkerer",
+  "powerstats": {
+   "durability": 14,
+   "strength": 10,
+   "combat": 14
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/668-tinkerer.jpg"
+ },
+ {
+  "name": "Toad",
+  "powerstats": {
+   "durability": 56,
+   "strength": 34,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/670-toad.jpg"
+ },
+ {
+  "name": "Toxin",
+  "powerstats": {
+   "durability": 84,
+   "strength": 73,
+   "combat": 70
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/671-toxin.jpg"
+ },
+ {
+  "name": "Triton",
+  "powerstats": {
+   "durability": 65,
+   "strength": 63,
+   "combat": 55
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/677-triton.jpg"
+ },
+ {
+  "name": "Ultragirl",
+  "powerstats": {
+   "durability": 70,
+   "strength": 80,
+   "combat": 80
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/679-ultragirl.jpg"
+ },
+ {
+  "name": "Ultron",
+  "powerstats": {
+   "durability": 100,
+   "strength": 83,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/680-ultron.jpg"
+ },
+ {
+  "name": "Utgard-Loki",
+  "powerstats": {
+   "durability": 84,
+   "strength": 80,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/681-utgard-loki.jpg"
+ },
+ {
+  "name": "Vanisher",
+  "powerstats": {
+   "durability": 56,
+   "strength": 10,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/685-vanisher.jpg"
+ },
+ {
+  "name": "Venom II",
+  "powerstats": {
+   "durability": 70,
+   "strength": 57,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/688-venom-ii.jpg"
+ },
+ {
+  "name": "Vulture",
+  "powerstats": {
+   "durability": 25,
+   "strength": 22,
+   "combat": 30
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/701-vulture.jpg"
+ },
+ {
+  "name": "Walrus",
+  "powerstats": {
+   "durability": 50,
+   "strength": 28,
+   "combat": 20
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/702-walrus.jpg"
+ },
+ {
+  "name": "War Machine",
+  "powerstats": {
+   "durability": 100,
+   "strength": 80,
+   "combat": 85
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/703-war-machine.jpg"
+ },
+ {
+  "name": "Warlock",
+  "powerstats": {
+   "durability": 95,
+   "strength": 36,
+   "combat": 95
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/705-warlock.jpg"
+ },
+ {
+  "name": "Wasp",
+  "powerstats": {
+   "durability": 52,
+   "strength": 17,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/708-wasp.jpg"
+ },
+ {
+  "name": "Watcher",
+  "powerstats": {
+   "durability": 89,
+   "strength": 80,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/709-watcher.jpg"
+ },
+ {
+  "name": "Winter Soldier",
+  "powerstats": {
+   "durability": 65,
+   "strength": 32,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/714-winter-soldier.jpg"
+ },
+ {
+  "name": "Wolfsbane",
+  "powerstats": {
+   "durability": 42,
+   "strength": 16,
+   "combat": 42
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/716-wolfsbane.jpg"
+ },
+ {
+  "name": "Wolverine",
+  "powerstats": {
+   "durability": 100,
+   "strength": 32,
+   "combat": 100
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/717-wolverine.jpg"
+ },
+ {
+  "name": "Wonder Man",
+  "powerstats": {
+   "durability": 90,
+   "strength": 100,
+   "combat": 64
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/719-wonder-man.jpg"
+ },
+ {
+  "name": "Wyatt Wingfoot",
+  "powerstats": {
+   "durability": 1,
+   "strength": 10,
+   "combat": 56
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/722-wyatt-wingfoot.jpg"
+ },
+ {
+  "name": "X-23",
+  "powerstats": {
+   "durability": 100,
+   "strength": 24,
+   "combat": 95
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/723-x-23.jpg"
+ },
+ {
+  "name": "X-Man",
+  "powerstats": {
+   "durability": 95,
+   "strength": 53,
+   "combat": 84
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/724-x-man.jpg"
+ },
+ {
+  "name": "Yellowjacket II",
+  "powerstats": {
+   "durability": 28,
+   "strength": 10,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/727-yellowjacket-ii.jpg"
+ },
+ {
+  "name": "Ymir",
+  "powerstats": {
+   "durability": 100,
+   "strength": 100,
+   "combat": 28
+  },
+  "image": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/728-ymir.jpg"
+ }
+]

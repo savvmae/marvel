@@ -1,43 +1,75 @@
-import md5 from './md5.min.js';
 import battle from './initialize.js';
 
-var PUBLIC_KEY = "438bf8eda93048d2d8e7fd8c711f3cfc";
-var PRIV_KEY = "926c1bd505c279e6a79f9fefba59022daff90045";
+var API_URL = 'https://akabab.github.io/superhero-api/api/all.json';
+var FALLBACK_URL = './characters-fallback.json';
+
 //variables for index
 var main = document.querySelector('.choose-char-main');
-var noImg = 'image_not_available';
-var nums = [];
 var filteredResults = [];
 var videoContainer = document.querySelector('.video-container');
 var video = document.querySelector('video');
 
-//Pulls data from api, sets results
-const getMarvelResponse = function(){
-video.addEventListener('ended', removeVideoPlaySong);
-
-  var ts = new Date().getTime();
-  var hash = md5(ts + PRIV_KEY + PUBLIC_KEY).toString();
-  var url = 'https://gateway.marvel.com/v1/public/events/238/characters';
-  var charResults;
-
-  $.getJSON(url, {
-    ts: ts,
-    apikey: PUBLIC_KEY,
-    hash: hash,
-    limit: 100
-  })
-    .done(function (data) {
-      charResults = data.data.results;
-      newChar(charResults);
-    })
-    .fail(function (err) {
-      console.log(err);
-    });
-};
-if(window.location.pathname === '/'){
-  getMarvelResponse();
+//powerstats come back 0-100, the battle screen expects the original ranges
+function scaleStat(value, min, max) {
+  return min + Math.round((value / 100) * (max - min));
 }
-if(window.location.pathname === '/battle.html') {
+
+//keeps a character only if it can survive the comma-split in localStorage
+function usable(c) {
+  var stats = c.powerstats;
+  return c.name.indexOf(',') === -1 && stats &&
+    typeof stats.durability === 'number' &&
+    typeof stats.strength === 'number' &&
+    typeof stats.combat === 'number';
+}
+
+function toRoster(records) {
+  return records.map(function (c) {
+    return [
+      c.name,
+      scaleStat(c.powerstats.durability, 15, 43),
+      scaleStat(c.powerstats.strength, 3, 8),
+      scaleStat(c.powerstats.combat, 3, 8),
+      c.image,
+    ];
+  });
+}
+
+//live api first, bundled snapshot if it's unreachable
+function loadCharacters() {
+  return fetch(API_URL)
+    .then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      return res.json();
+    })
+    .then(function (all) {
+      var marvel = all
+        .filter(function (c) {
+          return c.biography && c.biography.publisher === 'Marvel Comics';
+        })
+        .map(function (c) {
+          return { name: c.name, powerstats: c.powerstats, image: c.images.md };
+        })
+        .filter(usable);
+      if (!marvel.length) throw new Error('no marvel characters');
+      return toRoster(marvel);
+    })
+    .catch(function () {
+      return fetch(FALLBACK_URL)
+        .then(function (res) { return res.json(); })
+        .then(function (records) { return toRoster(records.filter(usable)); });
+    });
+}
+
+const getCharacters = function () {
+  video.addEventListener('ended', removeVideoPlaySong);
+  loadCharacters().then(newChar);
+};
+
+if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+  getCharacters();
+}
+if (window.location.pathname === '/battle.html') {
   battle();
 }
 
@@ -68,19 +100,9 @@ function randomCharGenerator(results) {
 }
 
 //creates new characters and puts them on page.
-function newChar(results) {
-  for (var i = 0; i < results.length; i++) {
-    //checks whether image_not_available
-    if (results[i].thumbnail.path.indexOf(noImg) === -1) {
-      var charImgPath = results[i].thumbnail.path + "/standard_fantastic." + results[i].thumbnail.extension;
-      var charHitValue = Math.floor(Math.random() * (7 - 1)) + 3;
-      var charKickValue = Math.floor(Math.random() * (7 - 1)) + 3;
-      console.log(charHitValue);
-      var charHealthValue = Math.floor(Math.random() * (30 - 1)) + 15;
-      var importantInfo = [results[i].name, charHealthValue, charHitValue, charKickValue, charImgPath];
-      filteredResults.push(importantInfo);
-    }
-  }
+function newChar(roster) {
+  filteredResults = roster;
+
   for (var k = 0; k < filteredResults.length; k++) {
     var charContainer = document.createElement('div');
     var charInfo = document.createElement('div');
@@ -143,4 +165,3 @@ function handleClick(event) {
   localStorage.playerComplete = playerStatsComplete.toString();
   location.assign("./battle.html");
 }
-
