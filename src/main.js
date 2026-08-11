@@ -9,6 +9,8 @@ var filteredResults = [];
 var videoContainer = document.querySelector('.video-container');
 var video = document.querySelector('video');
 var skipButton = document.querySelector('.skip-intro');
+var startButton = document.querySelector('.start-intro');
+var introSplash = document.querySelector('.intro-start');
 var introDone = false;
 
 //powerstats come back 0-100, the battle screen expects the original ranges
@@ -68,18 +70,31 @@ const getCharacters = function () {
   loadCharacters().then(newChar);
 };
 
-//browsers block autoplay with sound, so the intro is muted and every exit
-//route is wired up: it ended, it failed, or the visitor skipped it
+//autoplay with sound is blocked, so the intro waits behind a splash. the
+//click counts as the gesture that lets the video and the music play
 function startIntro() {
   if (!video) return;
 
   video.addEventListener('ended', removeVideoPlaySong);
   video.addEventListener('error', removeVideoPlaySong);
   if (skipButton) skipButton.addEventListener('click', removeVideoPlaySong);
+  if (startButton) startButton.addEventListener('click', playIntro);
+}
+
+function playIntro() {
+  if (introSplash) introSplash.remove();
+  video.muted = false;
 
   var started = video.play();
   if (started && typeof started.catch === 'function') {
-    started.catch(removeVideoPlaySong);
+    started.catch(function () {
+      //sound refused anyway, so fall back to a muted play rather than nothing
+      video.muted = true;
+      var retry = video.play();
+      if (retry && typeof retry.catch === 'function') {
+        retry.catch(removeVideoPlaySong);
+      }
+    });
   }
 }
 

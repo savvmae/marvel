@@ -349,6 +349,8 @@
   var videoContainer = document.querySelector(".video-container");
   var video = document.querySelector("video");
   var skipButton = document.querySelector(".skip-intro");
+  var startButton = document.querySelector(".start-intro");
+  var introSplash = document.querySelector(".intro-start");
   var introDone = false;
   function scaleStat(value, min, max) {
     return min + Math.round(value / 100 * (max - min));
@@ -397,9 +399,20 @@
     video.addEventListener("ended", removeVideoPlaySong);
     video.addEventListener("error", removeVideoPlaySong);
     if (skipButton) skipButton.addEventListener("click", removeVideoPlaySong);
+    if (startButton) startButton.addEventListener("click", playIntro);
+  }
+  function playIntro() {
+    if (introSplash) introSplash.remove();
+    video.muted = false;
     var started = video.play();
     if (started && typeof started.catch === "function") {
-      started.catch(removeVideoPlaySong);
+      started.catch(function() {
+        video.muted = true;
+        var retry = video.play();
+        if (retry && typeof retry.catch === "function") {
+          retry.catch(removeVideoPlaySong);
+        }
+      });
     }
   }
   if (window.location.pathname === "/" || window.location.pathname === "/index.html") {

@@ -554,7 +554,7 @@ battle page
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 2;
+  z-index: 3;
   padding: 8px 18px;
   font-size: 16px;
   color: #fff;
@@ -562,4 +562,33 @@ battle page
   border: 1px solid #fff;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.intro-start {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.start-intro {
+  padding: 18px 44px;
+  font-size: 24px;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.start-intro:hover {
+  color: #000;
+  background: #fff;
 }
